@@ -1,5 +1,9 @@
 * {
-  background-color: #fdf3ea;
   font-family: Georgia, serif;
   color: #000552;
+}
+
+p {
+  margin-top: 5px;
+  font-size: 18px;
 }

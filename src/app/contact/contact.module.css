@@ -1,0 +1,42 @@
+.infoSection {
+  margin-top: 50px;
+  width: 35%;
+  background-color: #ffe7d3;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.instructions {
+  font-size: 24px;
+  margin-bottom: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  margin-bottom: 5px;
+  border: 2px solid #9a9ffd;
+  border-radius: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.info:hover {
+  background-color: #9a9ffd;
+  cursor: pointer;
+}
+
+.contact {
+  width: 200px;
+  font-weight: bold;
+  font-style: italic;
+  transition: color 2s cubic-bezier(0.39, 0.575, 0.565, 1); /* Fast to turn green */
+}
+
+.copied {
+  color: green;
+  transition: color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); /* Slow to turn black */
+}

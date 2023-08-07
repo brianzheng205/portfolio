@@ -1,39 +1,54 @@
+.container {
+  background-color: #fdf3ea;
+}
+
 .header {
-  margin-top: 20px;
-  margin-right: 170px;
-  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .name {
-  position: absolute;
-  left: 320px;
   font-size: 20px;
-  font-family: Georgia, serif;
   font-weight: bold;
 }
 
-.pageRoutersHeader {
-  padding-top: 20px;
+.pageRouters {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-evenly;
+  width: 300px;
 }
 
-.pageRouter {
-  margin-left: 30px;
+.pageRouterInactive {
   font-size: 20px;
-  font-family: Georgia, serif;
 }
 
-.pageRouter:hover {
-  color: #000000;
-  cursor: pointer;
-  text-decoration: underline;
+.pageRouterInactive:hover {
+  color: #9a9ffd;
+  text-decoration: none;
+}
+
+.pageRouterActive {
+  color: #9a9ffd;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .heading {
-  margin-top: 100px;
+  margin-top: 20px;
   margin-left: 27%;
   margin-right: 27%;
   font-size: 40px;
   text-align: center;
+  font-weight: bold;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fdf3ea;
 }

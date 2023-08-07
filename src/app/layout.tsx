@@ -17,33 +17,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pageRouters: { [key: string]: string } = {
-    "About Me": "/",
-    Projects: "/projects",
-    Contact: "/contact",
-  };
-
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className={utilStyles.container}>
-          <div className={utilStyles.header}>
-            <p className={utilStyles.name}>Brian Zheng</p>
-
-            <div className={utilStyles.pageRoutersHeader}>
-              {Object.keys(pageRouters)
-                .reverse()
-                .map((label) => (
-                  <Link
-                    className={utilStyles.pageRouter}
-                    href={pageRouters[label]}
-                  >
-                    {label}
-                  </Link>
-                ))}
-            </div>
-          </div>
-        </div>
+      <body className={`${inter.className} + ${utilStyles.container}`}>
         {children}
       </body>
     </html>
