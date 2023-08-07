@@ -46,6 +46,13 @@
   font-weight: bold;
 }
 
+.intro {
+  margin-top: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-style: italic;
+}
+
 .column {
   display: flex;
   flex-direction: column;

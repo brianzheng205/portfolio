@@ -27,12 +27,12 @@ export default function Contact() {
         <div className={utilStyles.heading}>
           Feel free to contact me or learn more about me:
         </div>
-        <div className={styles.infoSection} onClick={handleCopyEmail}>
+        <div className={styles.infoSection}>
           <div className={styles.instructions}>
             Click my email to copy it or click the links to visit them.
           </div>
 
-          <div className={styles.info}>
+          <div className={styles.info} onClick={handleCopyEmail}>
             <div className={`${styles.contact} ${copied ? styles.copied : ""}`}>
               {copied ? "Copied!" : "Email"}
             </div>

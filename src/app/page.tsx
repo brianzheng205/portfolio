@@ -45,7 +45,7 @@ export default function AboutMe() {
           </span>{" "}
           student majoring in CS with a 4.75 GPA.
         </div>
-        <div className={styles.intro}>
+        <div className={utilStyles.intro}>
           <div>
             I am looking for a software engineer internship for Summer 2024.
           </div>
@@ -58,7 +58,7 @@ export default function AboutMe() {
         </div>
         <div className={styles.skillsContainer}>
           {Object.keys(categoryToSkills).map((category) => (
-            <div className={styles.list}>
+            <div className={styles.list} key={category}>
               <div className={styles.skillCategory}>{category}</div>
               {categoryToSkills[category].map((skill) =>
                 skillToProjects[skill] === MIT ? (

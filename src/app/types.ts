@@ -4,11 +4,16 @@ export enum Page {
   Contact = "Contact",
 }
 
-export type ProjectInfo = {
+export type ImageInfo = {
+  src: string;
+  caption: string;
+};
+
+export type ImageTextRowInfo = {
   imageSrc: string;
   title: string;
-  metadata: string;
+  metadata?: string;
   body: string;
-  buttons: { [key: string]: string };
-  pictureLeft: boolean;
+  buttons?: { [key: string]: string };
+  pictureLeft?: boolean;
 };
