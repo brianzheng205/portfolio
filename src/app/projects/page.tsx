@@ -1,9 +1,9 @@
-import Project from "./project";
+import Project from "../components/project";
 
 import Header from "../components/header";
-import { Page } from "../types";
-import utilStyles from "../utils.module.css";
-import styles from "./projects.module.css";
+import { ProjectInfo, Page } from "../types";
+import utilStyles from "../styles/utils.module.css";
+import styles from "../styles/projects.module.css";
 
 export default function Projects() {
   return (
@@ -21,35 +21,28 @@ export default function Projects() {
   );
 }
 
-type ProjectInfo = {
-  imageSrc: string;
-  title: string;
-  metadata: string;
-  body: string;
-  buttons: { [key: string]: string };
-};
-
 const feauturedProjects: ProjectInfo[] = [
   {
     imageSrc: "/papers_navigator_dark.png",
     title: "Idea Navigator",
-    metadata: "May 2023 - Present",
+    metadata: "May 2023 — Present",
     body: `
       Idea Navigator is a full-stack web app powered by React, TypeScript, and AWS. 
-      It is used to cluster unorganized data based on similarity to display onto a 2D filed for 
-      easy navigation. It currently displays research papers, meetings, and Lex Fridman podcasts 
-      related to the Computational Biology Lab @ MIT.
+      It is used to cluster unorganized data based on similarity to display onto a 2D field for 
+      easy navigation with many AI-powered tools. It currently displays research papers, 
+      meetings, and Lex Fridman podcasts related to the Computational Biology Lab @ MIT.
     `,
     buttons: {
       "Learn More": "/projects/ideaNavigator",
       Lab: "http://compbio.mit.edu/",
       "View Project": "http://seascapes.ai/",
     },
+    pictureLeft: true,
   },
   {
     imageSrc: "/bounceRecipes.png",
     title: "Bounce",
-    metadata: "June 2023 - Present",
+    metadata: "June 2023 — Present",
     body: `
       Bounce is a full-stack web app, powered by React, TypeScript, and AWS, offering users 
       an efficient platform to track recipes and manage to-do tasks. With a Recipe Dashboard 
@@ -63,5 +56,6 @@ const feauturedProjects: ProjectInfo[] = [
       GitHub: "https://github.com/emilyy-liew/bounce/tree/main",
       "View Project": "https://main.d2ngor7ea7fphp.amplifyapp.com/",
     },
+    pictureLeft: false,
   },
 ];

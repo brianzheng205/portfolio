@@ -4,8 +4,8 @@ import { useState } from "react";
 
 import Header from "../components/header";
 import { Page } from "../types";
-import utilStyles from "../utils.module.css";
-import styles from "./contact.module.css";
+import utilStyles from "../styles/utils.module.css";
+import styles from "../styles/contact.module.css";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);

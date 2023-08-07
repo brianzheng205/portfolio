@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Page } from "../types";
-import utilStyles from "../utils.module.css";
+import utilStyles from "../styles/utils.module.css";
 
 const pageRouters: { [key: string]: string } = {
   "About Me": "/",

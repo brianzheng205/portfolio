@@ -1,21 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./projects.module.css";
+import { ProjectInfo } from "../types";
+import styles from "../styles/projects.module.css";
 
 const aspectRatio = 3 / 2;
 const imageHeight = 300;
 const imageWidth = imageHeight * aspectRatio;
 
-export default function Project(props: {
-  imageSrc: string;
-  title: string;
-  metadata: string;
-  body: string;
-  buttons: { [key: string]: string };
-}) {
+export default function Project(props: ProjectInfo) {
   return (
-    <div className={styles.project}>
+    <div
+      className={props.pictureLeft ? styles.projectLeft : styles.projectRight}
+    >
       <Image
         className={styles.image}
         src={props.imageSrc}

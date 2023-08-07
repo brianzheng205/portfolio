@@ -7,19 +7,26 @@
   border-radius: 5%;
 }
 
-.project {
+.projectLeft {
   margin: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
+.projectRight {
+  margin: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
 .image {
+  margin: 0px 20px;
   border-radius: 5%;
 }
 
 .text {
-  margin-left: 20px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;

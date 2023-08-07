@@ -5,8 +5,8 @@ import { useState } from "react";
 
 import Header from "./components/header";
 import { Page } from "./types";
-import utilStyles from "./utils.module.css";
-import styles from "./aboutMe.module.css";
+import utilStyles from "./styles/utils.module.css";
+import styles from "./styles/aboutMe.module.css";
 
 export default function AboutMe() {
   const [colorMIT, setColorMIT] = useState(false);
