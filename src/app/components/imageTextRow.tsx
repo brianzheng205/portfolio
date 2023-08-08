@@ -23,25 +23,6 @@ export default function imageTextRow({
   buttons = {},
   pictureLeft = true,
 }: ImageTextRowInfo) {
-  function createButtonRows(): { label: string; link: string }[][] {
-    const rows: { label: string; link: string }[][] = [];
-    let currentRow: { label: string; link: string }[] = [];
-
-    Object.keys(buttons).forEach((buttonKey, index) => {
-      currentRow.push({ label: buttonKey, link: buttons[buttonKey] });
-
-      if (
-        currentRow.length === 3 ||
-        index === Object.keys(buttons).length - 1
-      ) {
-        rows.push(currentRow);
-        currentRow = [];
-      }
-    });
-
-    return rows;
-  }
-
   return (
     <div className={pictureLeft ? styles.projectLeft : styles.projectRight}>
       <Image

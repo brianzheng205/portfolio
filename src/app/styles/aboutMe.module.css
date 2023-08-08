@@ -56,6 +56,10 @@
   background-color: #9a9ffd;
 }
 
+.skillClicked {
+  background-color: #9a9ffd;
+}
+
 .link:hover {
   text-decoration: none;
   color: #9a9ffd;

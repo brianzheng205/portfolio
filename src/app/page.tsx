@@ -1,34 +1,67 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "./components/header";
+import { categoryToSkills, skillToProjects, MIT } from "./data/aboutMe";
 import { Page } from "./types";
+
 import utilStyles from "./styles/utils.module.css";
 import styles from "./styles/aboutMe.module.css";
 
 export default function AboutMe() {
   const [colorMIT, setColorMIT] = useState(false);
   const [highlightMIT, setHighlightMIT] = useState(false);
+  const [clickedSkills, setClickedSkills] = useState<string[]>([]);
+  const [lastClickedSkill, setLastClickedSkill] = useState<string>("");
 
-  const handleMITSkillClick = () => {
-    console.log("MIT skill clicked");
+  // Load clickedSkills and lastClickedSkill from Local Storage on component mount
+  useEffect(() => {
+    const storedSkills = localStorage.getItem("clickedSkills");
+    const storedLastSkill = localStorage.getItem("lastClickedSkill");
+
+    if (storedSkills !== null) {
+      setClickedSkills(JSON.parse(storedSkills));
+    }
+
+    if (storedLastSkill !== null) {
+      setLastClickedSkill(JSON.parse(storedLastSkill));
+    }
+  }, []);
+
+  // Save clickedSkills to Local Storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("clickedSkills", JSON.stringify(clickedSkills));
+  }, [clickedSkills]);
+
+  // Save lastClickedSkill to Local Storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("lastClickedSkill", JSON.stringify(lastClickedSkill));
+  }, [lastClickedSkill]);
+
+  function updateClickedSkills(skill: string) {
+    setLastClickedSkill(skill);
+
+    if (!clickedSkills.includes(skill)) {
+      setClickedSkills((prevClickedSkills) => [...prevClickedSkills, skill]);
+    }
+  }
+
+  const handleMITSkillClick = (skill: string) => {
     setColorMIT(true);
     setHighlightMIT(true);
+    updateClickedSkills(skill);
+
     setTimeout(() => {
       setHighlightMIT(false);
     }, 2000);
   };
 
-  const handleProjectClick = () => {
-    console.log("Project clicked");
+  const handleProjectClick = (skill: string) => {
     setColorMIT(false);
+    updateClickedSkills(skill);
   };
-
-  // const skillToOnClick: { [key in Skill]: () => void } = {
-
-  // };
 
   return (
     <>
@@ -63,18 +96,22 @@ export default function AboutMe() {
               {categoryToSkills[category].map((skill) =>
                 skillToProjects[skill] === MIT ? (
                   <div
-                    className={styles.skill}
+                    className={`${styles.skill} ${
+                      clickedSkills.includes(skill) ? styles.skillClicked : ""
+                    }`}
                     key={skill}
-                    onClick={handleMITSkillClick}
+                    onClick={() => handleMITSkillClick(skill)}
                   >
                     {skill}
                   </div>
                 ) : (
                   <Link
-                    className={styles.skill}
+                    className={`${styles.skill} ${
+                      clickedSkills.includes(skill) ? styles.skillClicked : ""
+                    }`}
                     href={skillToProjects[skill]}
                     key={skill}
-                    onClick={handleProjectClick}
+                    onClick={() => handleProjectClick(skill)}
                   >
                     {skill}
                   </Link>
@@ -87,43 +124,3 @@ export default function AboutMe() {
     </>
   );
 }
-
-const categoryToSkills: { [key: string]: string[] } = {
-  Languages: ["Python", "TypeScript", "JavaScript", "Java", "C", "Assembly"],
-  Technologies: [
-    "Next.js",
-    "React",
-    "AWS",
-    "APIs",
-    "AI",
-    "OpenAI",
-    "CSS",
-    "HTML",
-    "VSCode",
-    "Git",
-  ],
-};
-
-const projects = "/projects";
-const ideaNavigator = "/projects/ideaNavigator";
-const bounce = "/projects/bounce";
-const MIT = "MIT";
-
-const skillToProjects: { [key: string]: string } = {
-  Python: ideaNavigator,
-  TypeScript: projects,
-  JavaScript: projects,
-  Java: MIT,
-  C: MIT,
-  Assembly: MIT,
-  "Next.js": projects,
-  React: projects,
-  AWS: projects,
-  APIs: projects,
-  AI: ideaNavigator,
-  OpenAI: ideaNavigator,
-  CSS: projects,
-  HTML: projects,
-  VSCode: projects,
-  Git: projects,
-};

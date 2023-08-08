@@ -17,3 +17,15 @@ export type ImageTextRowInfo = {
   buttons?: { [key: string]: string };
   pictureLeft?: boolean;
 };
+
+export type ProjectInfo = {
+  title: string;
+  disclaimer: string;
+  websiteLink: string;
+  emilyLink?: string;
+  description: ImageTextRowInfo[];
+  contributions: ImageTextRowInfo[];
+  skills: string[];
+  imagesInfo: ImageInfo[];
+  handleScrollToSection?: () => void;
+};
