@@ -14,14 +14,14 @@ export type ImageTextRowInfo = {
   title: string;
   metadata?: string;
   body: string;
-  buttons?: { [key: string]: string };
+  links?: { [key: string]: string };
   pictureLeft?: boolean;
 };
 
 export type ProjectInfo = {
   title: string;
   disclaimer: string;
-  websiteLink: string;
+  links: { [key: string]: string };
   emilyLink?: string;
   description: ImageTextRowInfo[];
   contributions: ImageTextRowInfo[];

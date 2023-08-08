@@ -20,7 +20,7 @@ export default function imageTextRow({
   title,
   metadata = "",
   body,
-  buttons = {},
+  links = {},
   pictureLeft = true,
 }: ImageTextRowInfo) {
   return (
@@ -38,16 +38,16 @@ export default function imageTextRow({
         <p>{body}</p>
 
         <div className={styles.buttonsRow}>
-          {Object.keys(buttons).map((label) =>
-            isLocalPath(buttons[label]) ? (
-              <Link className={styles.button} key={label} href={buttons[label]}>
+          {Object.keys(links).map((label) =>
+            isLocalPath(links[label]) ? (
+              <Link className={styles.button} key={label} href={links[label]}>
                 {`${label} ➜`}
               </Link>
             ) : (
               <a
                 className={styles.button}
                 key={label}
-                href={buttons[label]}
+                href={links[label]}
                 target="_blank"
                 rel="noopener noreferrer"
               >

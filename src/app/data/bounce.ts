@@ -1,13 +1,19 @@
 import { skillToProjects, allProjects, bounce } from "./aboutMe";
 import { ProjectInfo } from "../types";
 
+export const bounceLinks = {
+  Website: "https://main.d2ngor7ea7fphp.amplifyapp.com/",
+  GitHub: "https://github.com/emilyy-liew/bounce/tree/main",
+  "Emily's Portfolio": "",
+};
+
 const projectInfo: ProjectInfo = {
   title: "Bounce",
   disclaimer: `
     The project is still in development.
     The information below is a description of the project as of August 7, 2023.
   `,
-  websiteLink: "https://main.d2ngor7ea7fphp.amplifyapp.com/",
+  links: bounceLinks,
   description: [],
   contributions: [
     {

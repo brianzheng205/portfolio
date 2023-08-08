@@ -12,7 +12,7 @@ import styles from "../styles/projects.module.css";
 export default function ProjectPageLayout({
   title,
   disclaimer,
-  websiteLink,
+  links,
   description,
   contributions,
   skills,
@@ -39,14 +39,20 @@ export default function ProjectPageLayout({
         </Link>
         <div className={styles.heading}>{title} | Description</div>
         <p className={utilStyles.intro}>{disclaimer}</p>
-        <a
-          className={styles.button}
-          href={websiteLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check out {title} ➜
-        </a>
+
+        <div className={styles.buttonsRow}>
+          {Object.keys(links).map((label) => (
+            <a
+              className={styles.button}
+              href={links[label]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {label} ➜
+            </a>
+          ))}
+        </div>
+
         <p className={utilStyles.intro}>
           Scroll to the next section to see my contributions.
         </p>

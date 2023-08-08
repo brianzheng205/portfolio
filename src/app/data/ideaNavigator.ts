@@ -1,13 +1,18 @@
 import { skillToProjects, allProjects, ideaNavigator } from "./aboutMe";
 import { ProjectInfo } from "../types";
 
+export const ideaNavigatorLinks = {
+  Website: "http://seascapes.ai/",
+  Lab: "http://compbio.mit.edu/",
+};
+
 const projectInfo: ProjectInfo = {
   title: "Idea Navigator",
   disclaimer: `
     The project is still in development, so the website may not be running.
     The information below is a description of the project as of August 7, 2023.
   `,
-  websiteLink: "http://seascapes.ai/",
+  links: ideaNavigatorLinks,
   description: [
     {
       imageSrc: "/ideaNavigator/homePage.png",
