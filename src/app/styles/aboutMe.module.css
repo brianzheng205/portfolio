@@ -52,11 +52,15 @@
   cursor: pointer;
 }
 
-.skill:hover {
-  background-color: #9a9ffd;
+.skill:visited {
+  background-color: #c7caff;
 }
 
-.skillClicked {
+.MITSkillClicked {
+  background-color: #c7caff;
+}
+
+.skill:hover {
   background-color: #9a9ffd;
 }
 

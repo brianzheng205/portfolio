@@ -13,54 +13,33 @@ import styles from "./styles/aboutMe.module.css";
 export default function AboutMe() {
   const [colorMIT, setColorMIT] = useState(false);
   const [highlightMIT, setHighlightMIT] = useState(false);
-  const [clickedSkills, setClickedSkills] = useState<string[]>([]);
+  const [MITSkillsClicked, setMITSkillsClicked] = useState<Set<string>>(
+    new Set()
+  );
   const [lastClickedSkill, setLastClickedSkill] = useState<string>("");
-
-  // Load clickedSkills and lastClickedSkill from Local Storage on component mount
-  useEffect(() => {
-    const storedSkills = localStorage.getItem("clickedSkills");
-    const storedLastSkill = localStorage.getItem("lastClickedSkill");
-
-    if (storedSkills !== null) {
-      setClickedSkills(JSON.parse(storedSkills));
-    }
-
-    if (storedLastSkill !== null) {
-      setLastClickedSkill(JSON.parse(storedLastSkill));
-    }
-  }, []);
-
-  // Save clickedSkills to Local Storage whenever it changes
-  useEffect(() => {
-    localStorage.setItem("clickedSkills", JSON.stringify(clickedSkills));
-  }, [clickedSkills]);
 
   // Save lastClickedSkill to Local Storage whenever it changes
   useEffect(() => {
     localStorage.setItem("lastClickedSkill", JSON.stringify(lastClickedSkill));
   }, [lastClickedSkill]);
 
-  function updateClickedSkills(skill: string) {
-    setLastClickedSkill(skill);
-
-    if (!clickedSkills.includes(skill)) {
-      setClickedSkills((prevClickedSkills) => [...prevClickedSkills, skill]);
-    }
-  }
-
   const handleMITSkillClick = (skill: string) => {
-    setColorMIT(true);
-    setHighlightMIT(true);
-    updateClickedSkills(skill);
+    setMITSkillsClicked(
+      (prevSkillsClicked) => new Set([...Array.from(prevSkillsClicked), skill])
+    );
+    console.log(MITSkillsClicked.has(skill));
+    setColorMIT(false);
+    setHighlightMIT(false);
 
     setTimeout(() => {
-      setHighlightMIT(false);
-    }, 2000);
+      setColorMIT(true);
+      setHighlightMIT(true);
+    }, 200);
   };
 
-  const handleProjectClick = (skill: string) => {
+  const handleProjectSkillClick = (skill: string) => {
     setColorMIT(false);
-    updateClickedSkills(skill);
+    setLastClickedSkill(skill);
   };
 
   return (
@@ -97,7 +76,7 @@ export default function AboutMe() {
                 skillToProjects[skill] === MIT ? (
                   <div
                     className={`${styles.skill} ${
-                      clickedSkills.includes(skill) ? styles.skillClicked : ""
+                      MITSkillsClicked.has(skill) ? styles.MITSkillClicked : ""
                     }`}
                     key={skill}
                     onClick={() => handleMITSkillClick(skill)}
@@ -106,12 +85,10 @@ export default function AboutMe() {
                   </div>
                 ) : (
                   <Link
-                    className={`${styles.skill} ${
-                      clickedSkills.includes(skill) ? styles.skillClicked : ""
-                    }`}
+                    className={styles.skill}
                     href={skillToProjects[skill]}
                     key={skill}
-                    onClick={() => handleProjectClick(skill)}
+                    onClick={() => handleProjectSkillClick(skill)}
                   >
                     {skill}
                   </Link>
