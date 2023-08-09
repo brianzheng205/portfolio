@@ -1,19 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import loadingTime from "../data/loading";
 import { ImageTextRowInfo } from "../types";
 import styles from "../styles/projects.module.css";
 
 /**
- * Creates a row with an image on one side and text on the other.
+ * Renders a row with an image on one side and text on the other.
  *
- * @param imageSrc Source of the image.
- * @param title Title of the text.
- * @param [metadata] Metadata of the text.
- * @param body Body of the text.
- * @param [buttons] Buttons to display at the bottom of the text.
- * @param [pictureLeft] Whether the image should be on the left or right.
- * @returns a row with an image on one side and text on the other.
+ * @param imageSrc The source of the image.
+ * @param title The title of the text.
+ * @param [metadata] The metadata of the text.
+ * @param body The body of the text.
+ * @param [links] The linked buttons to display at the bottom of the text.
+ * @param [pictureLeft] The boolean that specifies whether the image should be on the left or right.
+ * @param [priority] The boolean that specifies whether the image should be prioritized during loading.
+ * @param [setLoading] The function for setting the loading state.
+ * @returns A row with the image on one side and text on the other.
  */
 export default function imageTextRow({
   imageSrc,
@@ -23,7 +26,16 @@ export default function imageTextRow({
   links = {},
   pictureLeft = true,
   priority = false,
+  setLoading,
 }: ImageTextRowInfo) {
+  const handleClick = () => {
+    if (setLoading !== undefined) {
+      setTimeout(() => {
+        setLoading(true);
+      }, loadingTime);
+    }
+  };
+
   return (
     <div className={pictureLeft ? styles.projectLeft : styles.projectRight}>
       <Image
@@ -42,7 +54,12 @@ export default function imageTextRow({
         <div className={styles.buttonsRow}>
           {Object.keys(links).map((label) =>
             isLocalPath(links[label]) ? (
-              <Link className={styles.button} key={label} href={links[label]}>
+              <Link
+                className={styles.button}
+                key={label}
+                href={links[label]}
+                onClick={handleClick}
+              >
                 {`${label} ➜`}
               </Link>
             ) : (

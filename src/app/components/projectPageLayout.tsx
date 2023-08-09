@@ -6,10 +6,26 @@ import { useState, useEffect, useRef, RefObject } from "react";
 import { Link as ScrollLink } from "react-scroll";
 
 import ImageTextRow, { imageWidth, imageHeight } from "./imageTextRow";
+
+import loadingTime from "../data/loading";
 import { ProjectInfo } from "../types";
+
 import utilStyles from "../styles/utils.module.css";
 import styles from "../styles/projects.module.css";
 
+/**
+ * Renders the layout of a project page.
+ *
+ * @param title The title of the project.
+ * @param disclaimer The disclaimer of the project.
+ * @param links The links of the project.
+ * @param description The description of the project.
+ * @param contributions The contributions of the project.
+ * @param skills The skills used in the project.
+ * @param imagesInfo The information of the images to be displayed after contributions.
+ * @param [setLoading] The function for setting the loading state.
+ * @returns The layout of a project page.
+ */
 export default function ProjectPageLayout({
   title,
   disclaimer,
@@ -18,6 +34,7 @@ export default function ProjectPageLayout({
   contributions,
   skills,
   imagesInfo,
+  setLoading,
 }: ProjectInfo) {
   const contributionsRef: RefObject<HTMLDivElement> = useRef(null);
   const [lastClickedSkill, setLastClickedSkill] = useState("");
@@ -44,6 +61,14 @@ export default function ProjectPageLayout({
     }
   }, []);
 
+  const handleClick = () => {
+    if (setLoading !== undefined) {
+      setTimeout(() => {
+        setLoading(true);
+      }, loadingTime);
+    }
+  };
+
   return (
     <div className={utilStyles.column}>
       <ScrollLink className={styles.upButton} to="top">
@@ -52,7 +77,11 @@ export default function ProjectPageLayout({
 
       {/* Title */}
       <div className={styles.projectGroup}>
-        <NextLink className={styles.backButton} href="/projects">
+        <NextLink
+          className={styles.backButton}
+          href="/projects"
+          onClick={handleClick}
+        >
           ← Back To Projects
         </NextLink>
         <div className={styles.heading}>{title}</div>

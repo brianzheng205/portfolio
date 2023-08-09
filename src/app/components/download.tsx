@@ -2,6 +2,12 @@
 
 import styles from "../styles/projects.module.css";
 
+/**
+ * Renders the download button.
+ *
+ * @param text The text to display on the button.
+ * @returns The download button.
+ */
 export default function Download(props: { text: string }) {
   const handleDownload = () => {
     const pdfUrl = "/Resume.pdf";

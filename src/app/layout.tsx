@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" id="top">
-      <body className={`${utilStyles.container}`}>{children}</body>
+      <body className={utilStyles.container}>{children}</body>
     </html>
   );
 }
