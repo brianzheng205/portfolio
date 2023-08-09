@@ -13,12 +13,12 @@ import styles from "../styles/projects.module.css";
 export default function Projects() {
   const [lastClickedSkill, setLastClickedSkill] = useState<string>("");
 
-  // Load lastClickedSkill from Local Storage on component mount
+  // Make sure the client environment is ready so that localStorage is available
   useEffect(() => {
     const storedLastSkill = localStorage.getItem("lastClickedSkill");
 
     if (storedLastSkill !== null) {
-      setLastClickedSkill(JSON.parse(storedLastSkill));
+      setLastClickedSkill(storedLastSkill);
     }
   }, []);
 

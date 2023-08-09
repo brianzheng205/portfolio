@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, RefObject } from "react";
 
 import ImageTextRow, { imageWidth, imageHeight } from "./imageTextRow";
 import { ProjectInfo } from "../types";
@@ -17,16 +17,27 @@ export default function ProjectPageLayout({
   contributions,
   skills,
   imagesInfo,
-  handleScrollToSection,
 }: ProjectInfo) {
-  const [lastClickedSkill, setLastClickedSkill] = useState<string>("");
+  const contributionsRef: RefObject<HTMLDivElement> = useRef(null);
+  const [lastClickedSkill, setLastClickedSkill] = useState("");
 
-  // Load lastClickedSkill from Local Storage on component mount
+  // Make sure the client environment is ready so that localStorage is available
   useEffect(() => {
     const storedLastSkill = localStorage.getItem("lastClickedSkill");
 
     if (storedLastSkill !== null) {
-      setLastClickedSkill(JSON.parse(storedLastSkill));
+      setLastClickedSkill(storedLastSkill);
+    }
+
+    // Smooth scroll to contributions section if coming from About Me page
+    const storedfromAboutMe = localStorage.getItem("fromAboutMe");
+
+    if (storedfromAboutMe !== null && JSON.parse(storedfromAboutMe)) {
+      contributionsRef.current?.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      localStorage.setItem("fromAboutMe", "false");
     }
   }, []);
 
@@ -63,7 +74,11 @@ export default function ProjectPageLayout({
       </div>
 
       {/** My Contributions */}
-      <div className={styles.projectGroup} id="contributions">
+      <div
+        className={styles.projectGroup}
+        ref={contributionsRef}
+        id="contributions"
+      >
         <div className={styles.heading}>{title} | My Contributions</div>
 
         <div className={styles.skillsRow}>

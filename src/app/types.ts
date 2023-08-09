@@ -2,6 +2,7 @@ export enum Page {
   AboutMe = "About Me",
   Projects = "Projects",
   Contact = "Contact",
+  Resume = "Resume",
 }
 
 export type ImageInfo = {
@@ -27,5 +28,4 @@ export type ProjectInfo = {
   contributions: ImageTextRowInfo[];
   skills: string[];
   imagesInfo: ImageInfo[];
-  handleScrollToSection?: () => void;
 };

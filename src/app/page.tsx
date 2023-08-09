@@ -16,18 +16,11 @@ export default function AboutMe() {
   const [MITSkillsClicked, setMITSkillsClicked] = useState<Set<string>>(
     new Set()
   );
-  const [lastClickedSkill, setLastClickedSkill] = useState<string>("");
-
-  // Save lastClickedSkill to Local Storage whenever it changes
-  useEffect(() => {
-    localStorage.setItem("lastClickedSkill", JSON.stringify(lastClickedSkill));
-  }, [lastClickedSkill]);
 
   const handleMITSkillClick = (skill: string) => {
     setMITSkillsClicked(
       (prevSkillsClicked) => new Set([...Array.from(prevSkillsClicked), skill])
     );
-    console.log(MITSkillsClicked.has(skill));
     setColorMIT(false);
     setHighlightMIT(false);
 
@@ -39,7 +32,8 @@ export default function AboutMe() {
 
   const handleProjectSkillClick = (skill: string) => {
     setColorMIT(false);
-    setLastClickedSkill(skill);
+    localStorage.setItem("lastClickedSkill", skill);
+    localStorage.setItem("fromAboutMe", "true");
   };
 
   return (
