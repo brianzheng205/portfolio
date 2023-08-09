@@ -15,7 +15,7 @@ export default function Download(props: { text: string }) {
   };
 
   return (
-    <div className={styles.downloadButton} onClick={handleDownload}>
+    <div className={styles.button} onClick={handleDownload}>
       {props.text}
     </div>
   );

@@ -21,6 +21,7 @@ export default function ProjectPageLayout({
 }: ProjectInfo) {
   const contributionsRef: RefObject<HTMLDivElement> = useRef(null);
   const [lastClickedSkill, setLastClickedSkill] = useState("");
+
   let numImagesRendered = 0;
 
   // Make sure the client environment is ready so that localStorage is available
@@ -45,6 +46,11 @@ export default function ProjectPageLayout({
 
   return (
     <div className={utilStyles.column}>
+      <ScrollLink className={styles.upButton} to="top">
+        To Top ⬆
+      </ScrollLink>
+
+      {/* Title */}
       <div className={styles.projectGroup}>
         <NextLink className={styles.backButton} href="/projects">
           ← Back To Projects
@@ -59,7 +65,8 @@ export default function ProjectPageLayout({
           </ScrollLink>
         </div>
       </div>
-      {/** Description */}
+
+      {/* Description */}
       <div className={styles.projectGroup} id="description">
         <div className={styles.heading}>Description</div>
         <p className={utilStyles.intro}>{disclaimer}</p>
@@ -90,7 +97,7 @@ export default function ProjectPageLayout({
         })}
       </div>
 
-      {/** My Contributions */}
+      {/* My Contributions */}
       <div
         className={styles.projectGroup}
         ref={contributionsRef}
