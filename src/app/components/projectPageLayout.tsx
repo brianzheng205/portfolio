@@ -20,6 +20,7 @@ export default function ProjectPageLayout({
 }: ProjectInfo) {
   const contributionsRef: RefObject<HTMLDivElement> = useRef(null);
   const [lastClickedSkill, setLastClickedSkill] = useState("");
+  let numImagesRendered = 0;
 
   // Make sure the client environment is ready so that localStorage is available
   useEffect(() => {
@@ -55,6 +56,7 @@ export default function ProjectPageLayout({
           {Object.keys(links).map((label) => (
             <a
               className={styles.button}
+              key={label}
               href={links[label]}
               target="_blank"
               rel="noopener noreferrer"
@@ -68,9 +70,16 @@ export default function ProjectPageLayout({
           Scroll to the next section to see my contributions.
         </p>
 
-        {description.map((section) => (
-          <ImageTextRow {...section} key={section.title} />
-        ))}
+        {description.map((section) => {
+          numImagesRendered++;
+          return (
+            <ImageTextRow
+              key={section.title}
+              {...section}
+              priority={numImagesRendered <= 2}
+            />
+          );
+        })}
       </div>
 
       {/** My Contributions */}
@@ -94,9 +103,16 @@ export default function ProjectPageLayout({
           ))}
         </div>
 
-        {contributions.map((contribution) => (
-          <ImageTextRow {...contribution} key={contribution.title} />
-        ))}
+        {contributions.map((section) => {
+          numImagesRendered++;
+          return (
+            <ImageTextRow
+              key={section.title}
+              {...section}
+              priority={numImagesRendered <= 2}
+            />
+          );
+        })}
 
         <div className={styles.imagesRow}>
           {imagesInfo.map((imageInfo) => (

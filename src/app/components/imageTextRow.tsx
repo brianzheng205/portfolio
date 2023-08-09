@@ -22,6 +22,7 @@ export default function imageTextRow({
   body,
   links = {},
   pictureLeft = true,
+  priority = false,
 }: ImageTextRowInfo) {
   return (
     <div className={pictureLeft ? styles.projectLeft : styles.projectRight}>
@@ -31,6 +32,7 @@ export default function imageTextRow({
         alt={title}
         height={imageHeight}
         width={imageWidth}
+        priority={priority}
       />
       <div className={styles.text}>
         <div className={styles.title}>{title}</div>

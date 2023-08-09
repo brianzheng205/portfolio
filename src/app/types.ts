@@ -17,6 +17,7 @@ export type ImageTextRowInfo = {
   body: string;
   links?: { [key: string]: string };
   pictureLeft?: boolean;
+  priority?: boolean;
 };
 
 export type ProjectInfo = {
