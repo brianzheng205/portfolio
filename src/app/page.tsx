@@ -44,6 +44,12 @@ export default function AboutMe() {
     localStorage.setItem("lastClickedSkill", skill);
   };
 
+  const handleClick = () => {
+    setTimeout(() => {
+      setLoading(true);
+    }, loadingTime);
+  };
+
   return (
     <>
       {loading ? (
@@ -68,7 +74,11 @@ export default function AboutMe() {
               <div>
                 I am looking for a software engineer internship for Summer 2024.
               </div>
-              <Link className={styles.link} href="/contact">
+              <Link
+                className={styles.link}
+                href="/contact"
+                onClick={handleClick}
+              >
                 Contact me
               </Link>
             </div>
