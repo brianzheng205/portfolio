@@ -1,18 +1,3 @@
-.infoSection {
-  margin-top: 50px;
-  width: 35%;
-  background-color: #ffe7d3;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.instructions {
-  font-size: 24px;
-  margin-bottom: 5px;
-  padding: 10px;
-  text-align: center;
-}
-
 .info {
   display: flex;
   flex-direction: row;

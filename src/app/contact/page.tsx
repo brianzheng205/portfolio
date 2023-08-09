@@ -27,8 +27,8 @@ export default function Contact() {
         <div className={utilStyles.heading}>
           Feel free to contact me or learn more about me:
         </div>
-        <div className={styles.infoSection}>
-          <div className={styles.instructions}>
+        <div className={utilStyles.infoSection}>
+          <div className={utilStyles.instructions}>
             Click my email to copy it or click the links to visit them.
           </div>
 

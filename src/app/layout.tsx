@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import "./styles/globals.css";
 import utilStyles from "./styles/utils.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Brian Zheng's Portfolio",
@@ -18,9 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${utilStyles.container}`}>
-        {children}
-      </body>
+      <body className={`${utilStyles.container}`}>{children}</body>
     </html>
   );
 }
