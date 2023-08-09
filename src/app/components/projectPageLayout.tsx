@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import NextLink from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef, RefObject } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 import ImageTextRow, { imageWidth, imageHeight } from "./imageTextRow";
 import { ProjectInfo } from "../types";
@@ -43,13 +44,24 @@ export default function ProjectPageLayout({
   }, []);
 
   return (
-    <div className={utilStyles.column} id="description">
-      {/** Description */}
+    <div className={utilStyles.column}>
       <div className={styles.projectGroup}>
-        <Link className={styles.backButton} href="/projects">
+        <NextLink className={styles.backButton} href="/projects">
           ← Back To Projects
-        </Link>
-        <div className={styles.heading}>{title} | Description</div>
+        </NextLink>
+        <div className={styles.heading}>{title}</div>
+        <div className={styles.buttonsRow}>
+          <ScrollLink className={styles.button} to="description">
+            Go To Description ⬇
+          </ScrollLink>
+          <ScrollLink className={styles.button} to="contributions">
+            Go To My Contributions ⬇
+          </ScrollLink>
+        </div>
+      </div>
+      {/** Description */}
+      <div className={styles.projectGroup} id="description">
+        <div className={styles.heading}>Description</div>
         <p className={utilStyles.intro}>{disclaimer}</p>
 
         <div className={styles.buttonsRow}>
@@ -65,10 +77,6 @@ export default function ProjectPageLayout({
             </a>
           ))}
         </div>
-
-        <p className={utilStyles.intro}>
-          Scroll to the next section to see my contributions.
-        </p>
 
         {description.map((section) => {
           numImagesRendered++;
@@ -88,7 +96,7 @@ export default function ProjectPageLayout({
         ref={contributionsRef}
         id="contributions"
       >
-        <div className={styles.heading}>{title} | My Contributions</div>
+        <div className={styles.heading}>My Contributions</div>
 
         <div className={styles.skillsRow}>
           {skills.map((skill) => (

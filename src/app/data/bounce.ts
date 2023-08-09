@@ -4,14 +4,13 @@ import { ProjectInfo } from "../types";
 export const bounceLinks = {
   Website: "https://main.d2ngor7ea7fphp.amplifyapp.com/",
   GitHub: "https://github.com/emilyy-liew/bounce/tree/main",
-  "Emily's Portfolio": "",
+  "Emily's Portfolio": "https://emily-liew-portfolio.vercel.app/",
 };
 
 const projectInfo: ProjectInfo = {
-  title: "Bounce",
+  title: "Bounce (by Emily Liew)",
   disclaimer: `
-    The project is still in development.
-    The information below is a description of the project as of August 7, 2023.
+    Visit Emily's Portfolio for more information about Bounce.
   `,
   links: bounceLinks,
   description: [],

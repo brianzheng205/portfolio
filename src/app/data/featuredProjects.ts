@@ -27,7 +27,7 @@ export const feauturedProjects: ImageTextRowInfo[] = [
   },
   {
     imageSrc: "/bounce/recipes.png",
-    title: "Bounce (Led by Emily Liew)",
+    title: "Bounce (by Emily Liew)",
     metadata: "June 2023 — Present",
     body: `
       Bounce is a full-stack web app, powered by React, TypeScript, and AWS, offering users 

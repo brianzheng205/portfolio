@@ -82,6 +82,7 @@
   text-align: center;
   border-radius: 1em;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .downloadButton {
