@@ -14,16 +14,7 @@ import styles from "../styles/projects.module.css";
 
 export default function Projects() {
   const [loading, setLoading] = useState(false);
-  const [lastClickedSkill, setLastClickedSkill] = useState<string>("");
-
-  // Make sure the client environment is ready so that localStorage is available
-  useEffect(() => {
-    const storedLastSkill = localStorage.getItem("lastClickedSkill");
-
-    if (storedLastSkill !== null) {
-      setLastClickedSkill(storedLastSkill);
-    }
-  }, []);
+  const lastClickedSkill = localStorage.getItem("lastClickedSkill");
 
   return (
     <>

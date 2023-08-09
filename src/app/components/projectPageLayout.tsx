@@ -37,27 +37,14 @@ export default function ProjectPageLayout({
   setLoading,
 }: ProjectInfo) {
   const contributionsRef: RefObject<HTMLDivElement> = useRef(null);
-  const [lastClickedSkill, setLastClickedSkill] = useState("");
-
+  const lastClickedSkill = localStorage.getItem("lastClickedSkill");
   let numImagesRendered = 0;
 
-  // Make sure the client environment is ready so that localStorage is available
   useEffect(() => {
-    const storedLastSkill = localStorage.getItem("lastClickedSkill");
-
-    if (storedLastSkill !== null) {
-      setLastClickedSkill(storedLastSkill);
-    }
-
-    // Smooth scroll to contributions section if coming from About Me page
-    const storedfromAboutMe = localStorage.getItem("fromAboutMe");
-
-    if (storedfromAboutMe !== null && JSON.parse(storedfromAboutMe)) {
+    if (lastClickedSkill !== null && skills.includes(lastClickedSkill)) {
       contributionsRef.current?.scrollIntoView({
         behavior: "smooth",
       });
-
-      localStorage.setItem("fromAboutMe", "false");
     }
   }, []);
 
