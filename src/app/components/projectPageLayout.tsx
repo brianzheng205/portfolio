@@ -6,10 +6,24 @@ import { useState, useEffect, useRef, RefObject } from "react";
 import { Link as ScrollLink } from "react-scroll";
 
 import ImageTextRow, { imageWidth, imageHeight } from "./imageTextRow";
+
 import { ProjectInfo } from "../types";
+
 import utilStyles from "../styles/utils.module.css";
 import styles from "../styles/projects.module.css";
 
+/**
+ * Renders a project page.
+ *
+ * @param title The title of the project.
+ * @param disclaimer The disclaimer of the project.
+ * @param links The links of the project.
+ * @param description The description of the project.
+ * @param contributions The contributions of the project.
+ * @param skills The skills used in the project.
+ * @param imagesInfo The images at the end of the contributions.
+ * @returns A project page.
+ */
 export default function ProjectPageLayout({
   title,
   disclaimer,
@@ -21,26 +35,17 @@ export default function ProjectPageLayout({
 }: ProjectInfo) {
   const contributionsRef: RefObject<HTMLDivElement> = useRef(null);
   const [lastClickedSkill, setLastClickedSkill] = useState("");
-
   let numImagesRendered = 0;
 
   // Make sure the client environment is ready so that localStorage is available
   useEffect(() => {
-    const storedLastSkill = localStorage.getItem("lastClickedSkill");
+    const storedLastClicked = localStorage.getItem("lastClickedSkill");
 
-    if (storedLastSkill !== null) {
-      setLastClickedSkill(storedLastSkill);
-    }
-
-    // Smooth scroll to contributions section if coming from About Me page
-    const storedfromAboutMe = localStorage.getItem("fromAboutMe");
-
-    if (storedfromAboutMe !== null && JSON.parse(storedfromAboutMe)) {
+    if (storedLastClicked !== null && skills.includes(storedLastClicked)) {
+      setLastClickedSkill(storedLastClicked);
       contributionsRef.current?.scrollIntoView({
         behavior: "smooth",
       });
-
-      localStorage.setItem("fromAboutMe", "false");
     }
   }, []);
 
