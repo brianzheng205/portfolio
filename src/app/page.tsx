@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "./components/header";
 import { categoryToSkills, skillToProjects, MIT } from "./data/aboutMe";
@@ -16,13 +16,36 @@ export default function AboutMe() {
   const [MITSkillsClicked, setMITSkillsClicked] = useState<Set<string>>(
     new Set()
   );
+  const [projectSkillsClicked, setProjectSkillsClicked] = useState<Set<string>>(
+    new Set()
+  );
+
+  // Make sure local storage is available to set projectSkillsClicked
+  useEffect(() => {
+    const storedProjectSkills = localStorage.getItem("projectSkillsClicked");
+
+    if (storedProjectSkills !== null) {
+      setProjectSkillsClicked(new Set(JSON.parse(storedProjectSkills)));
+    }
+
+    const storedMITSkills = localStorage.getItem("MITSkillsClicked");
+
+    if (storedMITSkills !== null) {
+      setMITSkillsClicked(new Set(JSON.parse(storedMITSkills)));
+    }
+  }, []);
 
   const handleMITSkillClick = (skill: string) => {
-    setMITSkillsClicked(
-      (prevSkillsClicked) => new Set([...Array.from(prevSkillsClicked), skill])
-    );
     setColorMIT(false);
     setHighlightMIT(false);
+
+    const newMITSkills = MITSkillsClicked.add(skill);
+    setMITSkillsClicked(newMITSkills);
+    localStorage.setItem(
+      "MITSkillsClicked",
+      JSON.stringify(Array.from(newMITSkills))
+    );
+
     localStorage.setItem("lastClickedSkill", skill);
 
     setTimeout(() => {
@@ -33,6 +56,14 @@ export default function AboutMe() {
 
   const handleProjectSkillClick = (skill: string) => {
     setColorMIT(false);
+
+    const newSkillsClicked = projectSkillsClicked.add(skill);
+    setProjectSkillsClicked(newSkillsClicked);
+    localStorage.setItem(
+      "projectSkillsClicked",
+      JSON.stringify(Array.from(newSkillsClicked))
+    );
+
     localStorage.setItem("lastClickedSkill", skill);
   };
 
@@ -79,7 +110,9 @@ export default function AboutMe() {
                   </div>
                 ) : (
                   <Link
-                    className={styles.skill}
+                    className={`${styles.skill} ${
+                      projectSkillsClicked.has(skill) ? styles.skillVisited : ""
+                    }`}
                     href={skillToProjects[skill]}
                     key={skill}
                     onClick={() => handleProjectSkillClick(skill)}
