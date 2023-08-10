@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export enum Page {
   AboutMe = "About Me",
   Projects = "Projects",
@@ -18,15 +20,16 @@ export type ImageTextRowInfo = {
   links?: { [key: string]: string };
   pictureLeft?: boolean;
   priority?: boolean;
+  setLoading?: Dispatch<SetStateAction<boolean>>;
 };
 
 export type ProjectInfo = {
   title: string;
   disclaimer: string;
   links: { [key: string]: string };
-  emilyLink?: string;
   description: ImageTextRowInfo[];
   contributions: ImageTextRowInfo[];
   skills: string[];
   imagesInfo: ImageInfo[];
+  setLoading?: Dispatch<SetStateAction<boolean>>;
 };

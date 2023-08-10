@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Dispatch, SetStateAction } from "react";
 
+import loadingTime from "../data/loading";
 import { Page } from "../types";
 
 import utilStyles from "../styles/utils.module.css";
@@ -17,7 +19,18 @@ const pageRouters: { [key in Page]: string } = {
  * @param activePageRouter The current page the user is on.
  * @returns The header of the website.
  */
-export default function Header(props: { activePageRouter: Page }) {
+export default function Header(props: {
+  activePageRouter: Page;
+  setLoading: Dispatch<SetStateAction<boolean>>;
+}) {
+  const handleClick = (pageKey: Page) => {
+    if (pageKey !== props.activePageRouter) {
+      setTimeout(() => {
+        props.setLoading(true);
+      }, loadingTime);
+    }
+  };
+
   return (
     <div className={utilStyles.header}>
       <div className={utilStyles.name}>Brian Zheng</div>
@@ -37,6 +50,7 @@ export default function Header(props: { activePageRouter: Page }) {
                 }
                 href={pageRouters[pageKey]}
                 key={label}
+                onClick={() => handleClick(pageKey)}
               >
                 {label}
               </Link>

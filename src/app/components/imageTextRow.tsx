@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import loadingTime from "../data/loading";
 import { ImageTextRowInfo } from "../types";
 
 import styles from "../styles/projects.module.css";
@@ -25,7 +26,16 @@ export default function imageTextRow({
   links = {},
   pictureLeft = true,
   priority = false,
+  setLoading,
 }: ImageTextRowInfo) {
+  const handleClick = () => {
+    if (setLoading !== undefined) {
+      setTimeout(() => {
+        setLoading(true);
+      }, loadingTime);
+    }
+  };
+
   return (
     <div className={pictureLeft ? styles.projectLeft : styles.projectRight}>
       <Image
@@ -44,7 +54,12 @@ export default function imageTextRow({
         <div className={styles.buttonsRow}>
           {Object.keys(links).map((label) =>
             isLocalPath(links[label]) ? (
-              <Link className={styles.button} key={label} href={links[label]}>
+              <Link
+                className={styles.button}
+                key={label}
+                href={links[label]}
+                onClick={handleClick}
+              >
                 {`${label} ➜`}
               </Link>
             ) : (

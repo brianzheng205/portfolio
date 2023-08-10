@@ -32,22 +32,31 @@ export default function ProjectPageLayout({
   contributions,
   skills,
   imagesInfo,
+  setLoading,
 }: ProjectInfo) {
   const contributionsRef: RefObject<HTMLDivElement> = useRef(null);
   const [lastClickedSkill, setLastClickedSkill] = useState("");
   let numImagesRendered = 0;
 
-  // Make sure the client environment is ready so that localStorage is available
   useEffect(() => {
     const storedLastClicked = localStorage.getItem("lastClickedSkill");
 
     if (storedLastClicked !== null && skills.includes(storedLastClicked)) {
       setLastClickedSkill(storedLastClicked);
+
       contributionsRef.current?.scrollIntoView({
         behavior: "smooth",
       });
     }
   }, []);
+
+  const handleClick = () => {
+    if (setLoading !== undefined) {
+      setTimeout(() => {
+        setLoading(true);
+      }, loadingTime);
+    }
+  };
 
   return (
     <div className={utilStyles.column}>
@@ -57,7 +66,11 @@ export default function ProjectPageLayout({
 
       {/* Title */}
       <div className={styles.projectGroup}>
-        <NextLink className={styles.backButton} href="/projects">
+        <NextLink
+          className={styles.backButton}
+          href="/projects"
+          onClick={handleClick}
+        >
           ← Back To Projects
         </NextLink>
         <div className={styles.heading}>{title}</div>
