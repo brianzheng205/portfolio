@@ -1,4 +1,5 @@
 import { skillToProjects, allProjects, bounce } from "./aboutMe";
+
 import { ProjectInfo } from "../types";
 
 export const bounceLinks = {

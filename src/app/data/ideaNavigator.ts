@@ -1,4 +1,5 @@
 import { skillToProjects, allProjects, ideaNavigator } from "./aboutMe";
+
 import { ProjectInfo } from "../types";
 
 export const ideaNavigatorLinks = {
@@ -67,7 +68,7 @@ const projectInfo: ProjectInfo = {
         The existing parser only extracted specific details from a subset of papers 
         (around 43,000 out of millions). This required us to parse the entire 200+ GB 
         database each time we needed new data. To solve this, I extracted all the raw XML 
-        data from every paper, condensing it to a 1 GB file. I developed a new parser 
+        data from every paper, condensing it to a 1 GB file. I developed a new parser using Python
         to process this data, significantly reducing the workload from over 200 GB to
         1 GB. This improvement cut the parser's runtime from a few hours hours to under
         a minute, enabling efficient extraction of new data by our web team.

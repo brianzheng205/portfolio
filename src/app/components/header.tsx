@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Page } from "../types";
+
 import utilStyles from "../styles/utils.module.css";
 
 const pageRouters: { [key in Page]: string } = {
@@ -11,10 +12,10 @@ const pageRouters: { [key in Page]: string } = {
 };
 
 /**
- * Returns the header of the website.
+ * Creates the header of the website.
  *
- * @param activePageRouter the current page the user is on.
- * @returns the header of the website.
+ * @param activePageRouter The current page the user is on.
+ * @returns The header of the website.
  */
 export default function Header(props: { activePageRouter: Page }) {
   return (

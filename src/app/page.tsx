@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Header from "./components/header";
 import { categoryToSkills, skillToProjects, MIT } from "./data/aboutMe";
@@ -23,6 +23,7 @@ export default function AboutMe() {
     );
     setColorMIT(false);
     setHighlightMIT(false);
+    localStorage.setItem("lastClickedSkill", skill);
 
     setTimeout(() => {
       setColorMIT(true);
@@ -33,7 +34,6 @@ export default function AboutMe() {
   const handleProjectSkillClick = (skill: string) => {
     setColorMIT(false);
     localStorage.setItem("lastClickedSkill", skill);
-    localStorage.setItem("fromAboutMe", "true");
   };
 
   return (

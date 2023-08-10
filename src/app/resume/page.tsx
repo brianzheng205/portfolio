@@ -1,5 +1,6 @@
 import Header from "../components/header";
 import Download from "../components/download";
+
 import { Page } from "../types";
 
 import styles from "../styles/resume.module.css";

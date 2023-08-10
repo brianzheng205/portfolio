@@ -2,18 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ImageTextRowInfo } from "../types";
+
 import styles from "../styles/projects.module.css";
 
 /**
  * Creates a row with an image on one side and text on the other.
  *
- * @param imageSrc Source of the image.
- * @param title Title of the text.
- * @param [metadata] Metadata of the text.
- * @param body Body of the text.
- * @param [buttons] Buttons to display at the bottom of the text.
- * @param [pictureLeft] Whether the image should be on the left or right.
- * @returns a row with an image on one side and text on the other.
+ * @param imageSrc The source of the image.
+ * @param title The title of the text.
+ * @param [metadata] The metadata of the text.
+ * @param body The body of the text.
+ * @param [links] The links to display below the text.
+ * @param [pictureLeft] The boolean that specifies whether the image should be on the left or right.
+ * @param [priority] The boolean that specifies whether the image should be prioritized in loading.
+ * @returns A row with an image on one side and text on the other.
  */
 export default function imageTextRow({
   imageSrc,

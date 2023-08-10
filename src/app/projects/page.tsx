@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 
 import ImageTextRow from "../components/imageTextRow";
 import Header from "../components/header";
+
 import { allProjectsSkills, feauturedProjects } from "../data/featuredProjects";
+
 import { Page } from "../types";
 
 import utilStyles from "../styles/utils.module.css";

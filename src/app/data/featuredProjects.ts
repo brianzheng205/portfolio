@@ -1,6 +1,7 @@
 import { allProjects, skillToProjects } from "./aboutMe";
 import { ideaNavigatorLinks } from "./ideaNavigator";
 import { bounceLinks } from "./bounce";
+
 import { ImageTextRowInfo } from "../types";
 
 export const allProjectsSkills = Object.keys(skillToProjects).filter(
