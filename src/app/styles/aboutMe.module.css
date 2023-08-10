@@ -17,7 +17,7 @@
 
 .skillsContainer {
   margin-top: 20px;
-  width: 30%;
+  width: 600px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
