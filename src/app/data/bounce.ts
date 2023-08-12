@@ -21,16 +21,13 @@ const projectInfo: ProjectInfo = {
       title: "Updates Log Page",
       body: `
         I utilized the GitHub API to extract the project's commit history to create 
-        the Updates Log page. This page effectively presents commit messages, sorted 
+        the Updates Log page for developers. This page effectively presents commit messages, sorted 
         chronologically from the latest to the oldest. Notably, the Updates Log 
         serves as a visual representation of the app's developmental strides for 
-        the developers, Emily Liew and myself. Importantly, access to this log 
-        requires password authentication, ensuring the confidentiality of Bounce's 
-        implementation at the time of its universal launch. Additionally, for user 
+        the developers, Emily Liew and myself. Additionally, for user 
         convenience, I designed a persistent text area at the bottom of the screen 
         to display the app's version date and provide a link to the project's repository. 
-        Upon Bounce's full launch, the link will be removed. For now, the our work can 
-        be viewed here.
+        Our work on Bounce can be viewed there.
       `,
     },
     {
