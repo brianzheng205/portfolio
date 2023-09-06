@@ -1,7 +1,7 @@
 .projectGroup {
   margin-bottom: 50px;
-  padding: 30px 60px;
-  width: 1100px;
+  padding: 1% 2%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,8 @@
   font-weight: bold;
 }
 
-.projectLeft {
+.projectPicFirst,
+.projectTextFirst {
   margin: 30px;
   display: flex;
   flex-direction: row;
@@ -27,12 +28,8 @@
   align-items: center;
 }
 
-.projectRight {
-  margin: 30px;
-  display: flex;
+.projectTextFirst {
   flex-direction: row-reverse;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .image {
@@ -93,12 +90,6 @@
   z-index: 1000;
 }
 
-.button:hover,
-.backButton:hover,
-.upButton:hover {
-  background-color: #9a9ffd;
-}
-
 .skillsRow {
   display: flex;
   flex-direction: row;
@@ -129,4 +120,49 @@
   text-align: center;
   border-radius: 1em;
   text-decoration: none;
+}
+
+.button:hover,
+.backButton:hover,
+.upButton:hover {
+  background-color: #9a9ffd;
+}
+
+/* Small portrait */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .projectGroup {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 3% 6%;
+  }
+  .backButton {
+    position: static;
+    margin-bottom: 20px;
+  }
+  .buttonsRow {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .projectPicFirst,
+  .projectTextFirst {
+    display: flex;
+    margin: 0px;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .image {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Small landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .projectGroup {
+    padding: 20px;
+  }
 }

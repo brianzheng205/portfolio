@@ -13,7 +13,7 @@ import styles from "../styles/projects.module.css";
  * @param [metadata] The metadata of the text.
  * @param body The body of the text.
  * @param [links] The links to display below the text.
- * @param [pictureLeft] The boolean that specifies whether the image should be on the left or right.
+ * @param [pictureFirst] The boolean that specifies whether the image should be displayed before the text.
  * @param [priority] The boolean that specifies whether the image should be prioritized in loading.
  * @returns A row with an image on one side and text on the other.
  */
@@ -23,11 +23,11 @@ export default function imageTextRow({
   metadata = "",
   body,
   links = {},
-  pictureLeft = true,
+  pictureFirst = true,
   priority = false,
 }: ImageTextRowInfo) {
   return (
-    <div className={pictureLeft ? styles.projectLeft : styles.projectRight}>
+    <div className={pictureFirst ? styles.projectPicFirst : styles.projectTextFirst}>
       <Image
         className={styles.image}
         src={imageSrc}

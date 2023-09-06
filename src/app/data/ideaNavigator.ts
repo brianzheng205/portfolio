@@ -40,7 +40,7 @@ const projectInfo: ProjectInfo = {
         of the selected data points.  Navigators differ—Papers Navigator offers directed arrows 
         to explore references and citations. Other unique features are in the development.
       `,
-      pictureLeft: false,
+      pictureFirst: false,
     },
     {
       imageSrc: "/ideaNavigator/connected.png",
@@ -88,7 +88,7 @@ const projectInfo: ProjectInfo = {
         web app efficiently utilized resources and delivered a responsive interface 
         without unnecessary data overhead.
       `,
-      pictureLeft: false,
+      pictureFirst: false,
     },
     {
       imageSrc: "/ideaNavigator/chatGPT.png",
@@ -120,7 +120,7 @@ const projectInfo: ProjectInfo = {
         These cumulative efforts collectively amplified user engagement and 
         facilitated more effective data exploration.
       `,
-      pictureLeft: false,
+      pictureFirst: false,
     },
   ],
   skills: Object.keys(skillToProjects).filter(

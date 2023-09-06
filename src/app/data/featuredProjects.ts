@@ -12,7 +12,7 @@ export const feauturedProjects: ImageTextRowInfo[] = [
   {
     imageSrc: "/ideaNavigator/papersNavigator.png",
     title: "Idea Navigator",
-    metadata: "May 2023 — Present",
+    metadata: "May 2023 — September 2023",
     body: `
       Idea Navigator is a full-stack web app powered by React, TypeScript, and AWS. 
       It is used to cluster unorganized data based on similarity to display onto a 2D field for 
@@ -44,6 +44,6 @@ export const feauturedProjects: ImageTextRowInfo[] = [
       },
       ...bounceLinks,
     },
-    pictureLeft: false,
+    pictureFirst: false,
   },
 ];

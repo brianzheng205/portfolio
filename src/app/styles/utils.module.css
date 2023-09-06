@@ -3,44 +3,36 @@
 }
 
 .header {
-  margin-top: 40px;
+  margin: 0 auto;
+  margin-top: 2%;
   margin-bottom: 50px;
+  width: 70%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  font-size: 20px;
 }
 
 .name {
-  font-size: 20px;
   font-weight: bold;
 }
 
 .pageRouters {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
-  width: 400px;
+  gap: 15px;
 }
 
-.pageRouterInactive {
-  font-size: 20px;
-}
-
+.pageRouterActive,
 .pageRouterInactive:hover {
   color: #9a9ffd;
   text-decoration: none;
-}
-
-.pageRouterActive {
-  color: #9a9ffd;
-  font-size: 20px;
-  text-decoration: none;
+  font-weight: bold;
 }
 
 .heading {
-  margin-top: 20px;
-  margin-left: 27%;
-  margin-right: 27%;
+  margin: 0 auto;
+  width: 70%;
   font-size: 40px;
   text-align: center;
   font-weight: bold;
@@ -76,4 +68,35 @@
   margin-bottom: 5px;
   padding: 10px;
   text-align: center;
+}
+
+/* Small portrait */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .header {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .heading {
+    margin: 10px auto;
+    width: 100%;
+    font-size: 30px;
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  .pageRouters {
+    gap: 10px;
+  }
+
+}
+
+/* Small landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .header {
+    font-size: 14px;
+  }
 }

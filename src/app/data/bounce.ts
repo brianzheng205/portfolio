@@ -42,7 +42,7 @@ const projectInfo: ProjectInfo = {
         screen that is displayed during the initial page load, ensuring a smooth 
         and dynamic transition for users as they explore different sections of the app.
       `,
-      pictureLeft: false,
+      pictureFirst: false,
     },
     {
       imageSrc: "/UI.png",
