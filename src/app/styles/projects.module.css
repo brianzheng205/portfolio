@@ -132,27 +132,34 @@
 @media (max-width: 1024px) and (orientation: portrait) {
   .projectGroup {
     margin-bottom: 20px;
-    width: 100%;
+    width: 90%;
     padding: 3% 6%;
   }
+
+  .heading {
+    margin: 0px;
+    margin-bottom: 15px;
+    font-size: 25px;
+  }
+
   .backButton {
     position: static;
     margin-bottom: 20px;
   }
+
   .buttonsRow {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   .projectPicFirst,
   .projectTextFirst {
-    display: flex;
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 60px;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
   }
+
   .image {
     border-radius: 10px;
     width: 100%;
@@ -163,6 +170,30 @@
 /* Small landscape */
 @media (max-width: 1024px) and (orientation: landscape) {
   .projectGroup {
-    padding: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    padding: 3% 6%;
+  }
+
+  .heading {
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+
+  .backButton {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .projectPicFirst,
+  .projectTextFirst {
+    margin: 0px;
+    margin-top: 60px;
+  }
+  
+  .image {
+    border-radius: 10px;
+    width: 45%;
+    height: auto;
   }
 }

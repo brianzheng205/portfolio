@@ -10,7 +10,6 @@ export default function Bounce() {
     <>
       <Header activePageRouter={Page.Projects} />
       <ProjectPageLayout {...projectInfo} />
-      ``
     </>
   );
 }

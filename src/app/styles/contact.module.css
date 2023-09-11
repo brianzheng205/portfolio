@@ -21,7 +21,27 @@
   transition: color 2s cubic-bezier(0.39, 0.575, 0.565, 1); /* Fast to turn green */
 }
 
+.link {
+  word-wrap: break-word;
+}
+
 .copied {
   color: green;
   transition: color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); /* Slow to turn black */
+}
+
+/* Small portrait */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .info {
+    justify-content: center;
+  }
+
+  .contact {
+    text-align: center;
+  }
+}
+
+/* Small landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+
 }

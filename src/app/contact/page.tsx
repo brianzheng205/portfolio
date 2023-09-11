@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "../components/header";
 
@@ -10,7 +10,37 @@ import utilStyles from "../styles/utils.module.css";
 import styles from "../styles/contact.module.css";
 
 export default function Contact() {
+  const [isSmallPortrait, setIsSmallPortrait] = useState(true);
+  const [isSmallLandscape, setIsSmallLandscape] = useState(true);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const mediaQueryPortrait = window.matchMedia('(max-width: 1024px) and (orientation: portrait)');
+    const mediaQueryLandscape = window.matchMedia('(max-width: 1024px) and (orientation: landscape)');
+
+    // Function to handle changes in media queries
+    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
+      if (event.media === '(max-width: 1024px) and (orientation: portrait)') {
+        setIsSmallPortrait(event.matches);
+      } else if (event.media === '(max-width: 1024px) and (orientation: landscape)') {
+        setIsSmallLandscape(event.matches);
+      }
+    };
+
+    // Add event listeners for media queries
+    mediaQueryPortrait.addEventListener('change', handleMediaQueryChange);
+    mediaQueryLandscape.addEventListener('change', handleMediaQueryChange);
+
+    // Initial check for media query matches
+    setIsSmallPortrait(mediaQueryPortrait.matches);
+    setIsSmallLandscape(mediaQueryLandscape.matches);
+
+    // Cleanup by removing event listeners when the component unmounts
+    return () => {
+      mediaQueryPortrait.removeEventListener('change', handleMediaQueryChange);
+      mediaQueryLandscape.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
 
   const handleCopyEmail = () => {
     const email = "brian205@mit.edu";
@@ -48,7 +78,7 @@ export default function Contact() {
             rel="noopener noreferrer"
           >
             <div className={styles.contact}>LinkedIn</div>
-            https://www.linkedin.com/in/brian205
+            {!isSmallPortrait && "https://www.linkedin.com/in/brian205"}
           </a>
 
           <a
@@ -58,7 +88,7 @@ export default function Contact() {
             rel="noopener noreferrer"
           >
             <div className={styles.contact}>GitHub</div>
-            https://github.com/brianzheng205
+            {!isSmallPortrait && "https://github.com/brianzheng205"}
           </a>
         </div>
       </div>

@@ -92,11 +92,22 @@
     gap: 10px;
   }
 
+  .infoSection {
+    margin-top: 20px;
+    width: 90%;
+  }
 }
 
 /* Small landscape */
 @media (max-width: 1024px) and (orientation: landscape) {
   .header {
-    font-size: 14px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .heading {
+    margin: 5px auto;
+    width: 100%;
+    font-size: 30px;
   }
 }
