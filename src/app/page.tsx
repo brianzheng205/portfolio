@@ -80,7 +80,7 @@ export default function AboutMe() {
           >
             MIT
           </span>{" "}
-          student majoring in CS with a 5.00 GPA in CS and a 4.7 Overall GPA.
+          student majoring in CS with a 5.00 GPA in CS and a 4.9 Overall GPA.
         </div>
         <div className={utilStyles.intro}>
           <div>
