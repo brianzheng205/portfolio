@@ -20,16 +20,14 @@ export const feauturedProjects: ImageTextRowInfo[] = [
       meetings, and Lex Fridman podcasts related to the Computational Biology Lab @ MIT.
     `,
     links: {
-      ...{
-        "Learn More": "/projects/ideaNavigator",
-      },
       ...ideaNavigatorLinks,
+      "Learn More": "/projects/ideaNavigator",
     },
   },
   {
     imageSrc: "/bounce/recipes.png",
     title: "Bounce (by Emily Liew)",
-    metadata: "June 2023 — Present",
+    metadata: "June 2023 — September 2023",
     body: `
       Bounce is a full-stack web app, powered by React, TypeScript, and AWS, offering users 
       an efficient platform to track recipes and manage to-do tasks. With a Recipe Dashboard 
@@ -39,10 +37,8 @@ export const feauturedProjects: ImageTextRowInfo[] = [
       connectivity, enhancing user experience and convenience.
     `,
     links: {
-      ...{
-        "Learn More": "/projects/bounce",
-      },
       ...bounceLinks,
+      "Learn More": "/projects/bounce",
     },
     pictureFirst: false,
   },

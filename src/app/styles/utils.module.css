@@ -1,33 +1,5 @@
 .container {
-  background-color: #fdf3ea;
-}
-
-.header {
-  margin: 0 auto;
-  margin-top: 2%;
-  margin-bottom: 50px;
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 20px;
-}
-
-.name {
-  font-weight: bold;
-}
-
-.pageRouters {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 15px;
-}
-
-.pageRouterActive,
-.pageRouterInactive:hover {
-  color: #9a9ffd;
-  text-decoration: none;
-  font-weight: bold;
+  background-color: white;
 }
 
 .heading {
@@ -49,7 +21,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fdf3ea;
 }
 
 .infoSection {
@@ -72,24 +43,10 @@
 
 /* Small portrait */
 @media (max-width: 1024px) and (orientation: portrait) {
-  .header {
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 14px;
-  }
-
   .heading {
     margin: 10px auto;
     width: 100%;
     font-size: 30px;
-  }
-  
-  .name {
-    font-weight: bold;
-  }
-  
-  .pageRouters {
-    gap: 10px;
   }
 
   .infoSection {

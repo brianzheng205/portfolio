@@ -2,10 +2,11 @@ import Link from "next/link";
 
 import { Page } from "../types";
 
-import utilStyles from "../styles/utils.module.css";
+import styles from "./header.module.css";
 
 const pageRouters: { [key in Page]: string } = {
   "About Me": "/",
+  Experiences: "/experiences",
   Projects: "/projects",
   Contact: "/contact",
   Resume: "/resume",
@@ -19,27 +20,27 @@ const pageRouters: { [key in Page]: string } = {
  */
 export default function Header(props: { activePageRouter: Page }) {
   return (
-    <div className={utilStyles.header}>
-      <div className={utilStyles.name}>Brian Zheng</div>
+    <div className={styles.container}>
+      <div className={styles.name}>Brian Zheng</div>
 
-      <div className={utilStyles.pageRouters}>
+      <div className={styles["page-routers"]}>
         {Object.keys(pageRouters)
           .reverse()
           .map((label) => {
             const pageKey = label as Page;
+            const route = pageRouters[pageKey];
 
             return (
-              <Link
-                className={
-                  label === props.activePageRouter
-                    ? utilStyles.pageRouterActive
-                    : utilStyles.pageRouterInactive
-                }
-                href={pageRouters[pageKey]}
+              <div
                 key={label}
+                className={
+                  route === props.activePageRouter
+                    ? styles.active
+                    : styles.inactive
+                }
               >
-                {label}
-              </Link>
+                <Link href={route}>{label}</Link>
+              </div>
             );
           })}
       </div>

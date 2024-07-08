@@ -15,6 +15,7 @@ import styles from "../styles/projects.module.css";
 /**
  * Creates a project page.
  *
+ * @param backLabel The label to go back to the previous page.
  * @param title The title of the project.
  * @param disclaimer The disclaimer of the project.
  * @param links The links of the project.
@@ -61,9 +62,6 @@ export default function ProjectPageLayout({
 
       {/* Title */}
       <div className={styles.projectGroup}>
-        <NextLink className={styles.backButton} href="/projects">
-          ← Back To Projects
-        </NextLink>
         <div className={styles.heading}>{title}</div>
         <div className={styles.buttonsRow}>
           <ScrollLink className={styles.button} to="description">
