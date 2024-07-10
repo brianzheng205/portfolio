@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { Page } from "../types";
 
@@ -15,10 +18,11 @@ const pageRouters: { [key in Page]: string } = {
 /**
  * Creates the header of the website.
  *
- * @param activePageRouter The current page the user is on.
  * @returns The header of the website.
  */
-export default function Header(props: { activePageRouter: Page }) {
+export default function Header() {
+  const path = usePathname().split("/", 2).join("/") as Page;
+
   return (
     <div className={styles.container}>
       <div className={styles.name}>Brian Zheng</div>
@@ -33,11 +37,7 @@ export default function Header(props: { activePageRouter: Page }) {
             return (
               <div
                 key={label}
-                className={
-                  route === props.activePageRouter
-                    ? styles.active
-                    : styles.inactive
-                }
+                className={route === path ? styles.active : styles.inactive}
               >
                 <Link href={route}>{label}</Link>
               </div>
