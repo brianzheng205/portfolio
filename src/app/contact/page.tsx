@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 
-import utilStyles from "../styles/utils.module.css";
-import styles from "../styles/contact.module.css";
+import utilStyles from "../utils.module.css";
+import styles from "./styles.module.css";
 
 const email = "brianzheng205@gmail.com";
 
@@ -57,9 +57,7 @@ export default function Contact() {
 
   return (
     <div className={utilStyles.column}>
-      <div className={utilStyles.heading}>
-        Feel free to contact me or learn more about me:
-      </div>
+      <h1>Feel free to contact me or learn more about me:</h1>
       <div className={utilStyles.infoSection}>
         <div className={utilStyles.instructions}>
           Click my email to copy it or click the links to visit them.

@@ -1,7 +1,7 @@
 import Download from "../components/download";
 
-import styles from "../styles/resume.module.css";
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "../utils.module.css";
+import styles from "./styles.module.css";
 
 export default function Resume() {
   return (

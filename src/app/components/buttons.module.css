@@ -1,0 +1,19 @@
+.buttonsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: #ff9a9a;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 1em;
+}
+
+.clickable {
+  cursor: pointer;
+}

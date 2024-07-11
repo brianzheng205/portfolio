@@ -1,16 +1,16 @@
 "use client";
 
-import NextLink from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useRef, RefObject } from "react";
+import { useRef, RefObject } from "react";
 import { Link as ScrollLink } from "react-scroll";
 
 import ImageTextRow, { imageWidth, imageHeight } from "./imageTextRow";
+import Buttons from "./buttons";
 
 import { ProjectInfo } from "../types";
 
-import utilStyles from "../styles/utils.module.css";
-import styles from "../styles/projects.module.css";
+import utilStyles from "../utils.module.css";
+import styles from "./image-text-row.module.css";
 
 /**
  * Creates a project page.
@@ -35,24 +35,7 @@ export default function ProjectPageLayout({
   imagesInfo,
 }: ProjectInfo) {
   const contributionsRef: RefObject<HTMLDivElement> = useRef(null);
-  const [lastClickedSkill, setLastClickedSkill] = useState("");
   let numImagesRendered = 0;
-
-  // Make sure the client environment is ready so that localStorage is available
-  useEffect(() => {
-    const storedLastSkill = localStorage.getItem("lastClickedSkill");
-
-    if (storedLastSkill !== null) {
-      setLastClickedSkill(storedLastSkill);
-
-      // Smooth scroll to contributions section if user clicked on relevant skill
-      if (skills.includes(storedLastSkill)) {
-        contributionsRef.current?.scrollIntoView({
-          behavior: "smooth",
-        });
-      }
-    }
-  }, []);
 
   return (
     <div className={utilStyles.column}>
@@ -61,8 +44,8 @@ export default function ProjectPageLayout({
       </ScrollLink>
 
       {/* Title */}
-      <div className={styles.projectGroup}>
-        <div className={styles.heading}>{title}</div>
+      <div className={utilStyles.projectGroup}>
+        <h1>{title}</h1>
         <div className={styles.buttonsRow}>
           <ScrollLink className={styles.button} to="description">
             Go To Description ⬇
@@ -74,8 +57,8 @@ export default function ProjectPageLayout({
       </div>
 
       {/* Description */}
-      <div className={styles.projectGroup} id="description">
-        <div className={styles.heading}>Description</div>
+      <div className={utilStyles.projectGroup} id="description">
+        <h1>Description</h1>
         <p className={utilStyles.intro}>{disclaimer}</p>
 
         <div className={styles.buttonsRow}>
@@ -106,31 +89,24 @@ export default function ProjectPageLayout({
 
       {/* My Contributions */}
       <div
-        className={styles.projectGroup}
+        className={utilStyles.projectGroup}
         ref={contributionsRef}
         id="contributions"
       >
-        <div className={styles.heading}>My Contributions</div>
+        <h1>My Contributions</h1>
 
-        <div className={styles.skillsRow}>
-          {skills.map((skill) => (
-            <div
-              className={`${styles.skill} ${
-                skill === lastClickedSkill ? styles.skillClicked : ""
-              }`}
-              key={skill}
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
+        <Buttons
+          buttons={skills.map((skill) => ({
+            label: skill,
+          }))}
+        />
 
-        {contributions.map((section) => {
+        {contributions.map((mission) => {
           numImagesRendered++;
           return (
             <ImageTextRow
-              key={section.title}
-              {...section}
+              key={mission.title}
+              {...mission}
               priority={numImagesRendered <= 2}
             />
           );

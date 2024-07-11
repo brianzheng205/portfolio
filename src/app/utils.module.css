@@ -2,14 +2,6 @@
   background-color: white;
 }
 
-.heading {
-  margin: 0 auto;
-  width: 70%;
-  font-size: 40px;
-  text-align: center;
-  font-weight: bold;
-}
-
 .intro {
   margin-top: 10px;
   font-size: 22px;
@@ -41,14 +33,20 @@
   text-align: center;
 }
 
+.projectGroup {
+  margin-bottom: 50px;
+  padding: 1% 2%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #ffe7d3;
+  border-radius: 40px;
+}
+
 /* Small portrait */
 @media (max-width: 1024px) and (orientation: portrait) {
-  .heading {
-    margin: 10px auto;
-    width: 100%;
-    font-size: 30px;
-  }
-
   .infoSection {
     margin-top: 20px;
     width: 90%;
@@ -60,11 +58,5 @@
   .header {
     margin-bottom: 20px;
     font-size: 18px;
-  }
-
-  .heading {
-    margin: 5px auto;
-    width: 100%;
-    font-size: 30px;
   }
 }

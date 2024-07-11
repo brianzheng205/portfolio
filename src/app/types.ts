@@ -15,7 +15,7 @@ export type ImageTextRowInfo = {
   imageSrc: string;
   title: string;
   metadata?: string;
-  body: string;
+  body: { [key: string]: string | string[] };
   links?: { [key: string]: string };
   pictureFirst?: boolean;
   priority?: boolean;

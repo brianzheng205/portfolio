@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-import { categoryToSkills, skillToProjects, MIT } from "./data/aboutMe";
+import { categoryToSkills, skillToProjects, MIT } from "./data";
 
-import utilStyles from "./styles/utils.module.css";
-import styles from "./styles/aboutMe.module.css";
+import utilStyles from "./utils.module.css";
+import styles from "./styles.module.css";
 
 export default function AboutMe() {
   const [colorMIT, setColorMIT] = useState(false);
@@ -67,7 +67,7 @@ export default function AboutMe() {
 
   return (
     <div className={utilStyles.column}>
-      <div className={utilStyles.heading}>
+      <h1>
         I'm Brian Zheng. I'm graduating{" "}
         <span
           className={`${colorMIT ? styles.colorMIT : ""} ${
@@ -78,7 +78,7 @@ export default function AboutMe() {
         </span>{" "}
         in May 2025 with a Bachelor's of Science in Computer Science with a 4.8
         Major GPA and a 4.7 Overall GPA.
-      </div>
+      </h1>
       <div className={utilStyles.intro}>
         <div>I am looking for a 2025 New Grad Software Engineering role.</div>
         <Link className={styles.link} href="/contact">

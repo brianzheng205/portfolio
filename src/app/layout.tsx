@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 import Header from "./components/header";
 
-import "./styles/globals.css";
-import utilStyles from "./styles/utils.module.css";
+import "./globals.css";
+import utilStyles from "./utils.module.css";
 
 export const metadata: Metadata = {
   title: "Brian Zheng's Portfolio",

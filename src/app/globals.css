@@ -3,9 +3,20 @@
   color: #000552;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p {
   margin-top: 5px;
   font-size: 18px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
 }
 
 ::-webkit-scrollbar {
@@ -23,8 +34,4 @@ p {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
-}
-
-html {
-  scroll-behavior: smooth;
 }
