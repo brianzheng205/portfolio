@@ -4,7 +4,6 @@ const skills = ["React", "Redux", "JavaScript", "HTML", "CSS", "Git", "VSCode"];
 
 const data: ProjectInfo = {
   title: "MIT CAVE Lab",
-  disclaimer: "",
   links: {},
   description: [],
   contributions: [

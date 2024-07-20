@@ -22,7 +22,7 @@ export const data: ImageTextRowInfo[] = [
       ],
       Journey: `
         I implemented many features and fixed many bugs in React applications. I learned a lot
-        about React, Redux, JavaScript, Git branches, and the development process.
+        about the tech stack and gained experience in React libraries such as Three.js and map-react-gl.
       `,
       Results: `
         MIT CAVE Lab's applications have improved and have new features to better fit the needs of users.

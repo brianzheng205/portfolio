@@ -3,14 +3,14 @@
   flex-direction: row;
   font-size: 24px;
   margin-bottom: 5px;
-  border: 2px solid #9a9ffd;
+  border: 2px solid var(--accent-color);
   border-radius: 20px;
   padding: 10px;
   text-decoration: none;
 }
 
 .info:hover {
-  background-color: #9a9ffd;
+  background-color: var(--accent-color);
   cursor: pointer;
 }
 

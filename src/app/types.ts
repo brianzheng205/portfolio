@@ -23,7 +23,6 @@ export type ImageTextRowInfo = {
 
 export type ProjectInfo = {
   title: string;
-  disclaimer: string;
   links: { [key: string]: string };
   emilyLink?: string;
   description: ImageTextRowInfo[];

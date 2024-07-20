@@ -16,8 +16,6 @@ const pageRouters: { [key in Page]: string } = {
 };
 
 /**
- * Creates the header of the website.
- *
  * @returns The header of the website.
  */
 export default function Header() {

@@ -43,7 +43,7 @@ export default function imageTextRow({
         priority={priority}
       />
       <div className={styles.text}>
-        <div className={styles.title}>{title}</div>
+        <h2>{title}</h2>
         {metadata !== "" && <p>{metadata}</p>}
         {Object.keys(body).map((key) => {
           return (

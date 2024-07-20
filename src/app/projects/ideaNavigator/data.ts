@@ -8,10 +8,6 @@ export const ideaNavigatorLinks = {
 
 const projectInfo: ProjectInfo = {
   title: "Idea Navigator (by CSAIL)",
-  disclaimer: `
-    The project is still in development, so the website may not be running.
-    The information below is a description of the project as of August 7, 2023.
-  `,
   links: ideaNavigatorLinks,
   description: [],
   contributions: [

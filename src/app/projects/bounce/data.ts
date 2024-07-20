@@ -10,9 +10,6 @@ export const bounceLinks = {
 
 const projectInfo: ProjectInfo = {
   title: "Bounce (by Emily Liew)",
-  disclaimer: `
-    Visit Emily's Portfolio for more information about Bounce.
-  `,
   links: bounceLinks,
   description: [],
   contributions: [

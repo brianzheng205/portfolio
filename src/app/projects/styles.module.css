@@ -1,23 +1,8 @@
 /* Small portrait */
 @media (max-width: 1024px) and (orientation: portrait) {
-  .projectGroup {
-    margin-bottom: 20px;
-    width: 90%;
-    padding: 3% 6%;
-  }
-
   .buttonsRow {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-}
-
-/* Small landscape */
-@media (max-width: 1024px) and (orientation: landscape) {
-  .projectGroup {
-    margin-bottom: 20px;
-    width: 90%;
-    padding: 3% 6%;
   }
 }
