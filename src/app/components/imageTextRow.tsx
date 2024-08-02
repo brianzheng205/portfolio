@@ -46,14 +46,15 @@ export default function imageTextRow({
         <h2>{title}</h2>
         {metadata !== "" && <p>{metadata}</p>}
         {Object.keys(body).map((key) => {
+          const value = body[key];
           return (
             <div key={key}>
               <h3>{key}</h3>
-              {typeof body[key] === "string" ? (
-                <p>{body[key]}</p>
+              {typeof value === "string" ? (
+                <p>{value}</p>
               ) : (
                 <ul>
-                  {body[key].map((resource) => (
+                  {value.map((resource) => (
                     <li key={resource}>{resource}</li>
                   ))}
                 </ul>
