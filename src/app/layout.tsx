@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 
-import "./styles/globals.css";
-import utilStyles from "./styles/utils.module.css";
+import Header from "./components/header";
+
+import "./globals.css";
+import utilStyles from "./utils.module.css";
 
 export const metadata: Metadata = {
   title: "Brian Zheng's Portfolio",
@@ -15,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" id="top">
-      <body className={`${utilStyles.container}`}>{children}</body>
+      <body className={`${utilStyles.container}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

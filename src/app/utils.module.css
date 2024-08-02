@@ -1,0 +1,61 @@
+.container {
+  background-color: var(--background-color);
+}
+
+.intro {
+  margin-top: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-style: italic;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 50px;
+  width: 700px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+}
+
+.instructions {
+  font-size: 24px;
+  margin-bottom: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.projectGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin: 10px 0;
+  padding: 20px 10px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+}
+
+/* Small portrait */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .infoSection {
+    margin-top: 20px;
+    width: 90%;
+  }
+}
+
+/* Small landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .header {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}

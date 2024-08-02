@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../styles/projects.module.css";
+import styles from "./image-text-row.module.css";
 
 /**
  * Creates a download button.

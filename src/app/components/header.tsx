@@ -1,45 +1,44 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { Page } from "../types";
 
-import utilStyles from "../styles/utils.module.css";
+import styles from "./header.module.css";
 
 const pageRouters: { [key in Page]: string } = {
   "About Me": "/",
+  Experiences: "/experiences",
   Projects: "/projects",
   Contact: "/contact",
   Resume: "/resume",
 };
 
 /**
- * Creates the header of the website.
- *
- * @param activePageRouter The current page the user is on.
  * @returns The header of the website.
  */
-export default function Header(props: { activePageRouter: Page }) {
-  return (
-    <div className={utilStyles.header}>
-      <div className={utilStyles.name}>Brian Zheng</div>
+export default function Header() {
+  const path = usePathname().split("/", 2).join("/") as Page;
 
-      <div className={utilStyles.pageRouters}>
+  return (
+    <div className={styles.container}>
+      <div className={styles.name}>Brian Zheng</div>
+
+      <div className={styles["page-routers"]}>
         {Object.keys(pageRouters)
           .reverse()
           .map((label) => {
             const pageKey = label as Page;
+            const route = pageRouters[pageKey];
 
             return (
-              <Link
-                className={
-                  label === props.activePageRouter
-                    ? utilStyles.pageRouterActive
-                    : utilStyles.pageRouterInactive
-                }
-                href={pageRouters[pageKey]}
+              <div
                 key={label}
+                className={route === path ? styles.active : styles.inactive}
               >
-                {label}
-              </Link>
+                <Link href={route}>{label}</Link>
+              </div>
             );
           })}
       </div>

@@ -1,54 +1,24 @@
-"use client";
-
-import { useState, useEffect } from "react";
-
 import ImageTextRow from "../components/imageTextRow";
-import Header from "../components/header";
+import Buttons from "../components/buttons";
 
-import { allProjectsSkills, feauturedProjects } from "../data/featuredProjects";
+import { allProjectsSkills, feauturedProjects } from "./data";
 
-import { Page } from "../types";
-
-import utilStyles from "../styles/utils.module.css";
-import styles from "../styles/projects.module.css";
+import utilStyles from "../utils.module.css";
 
 export default function Projects() {
-  const [lastClickedSkill, setLastClickedSkill] = useState<string>("");
-
-  // Make sure the client environment is ready so that localStorage is available
-  useEffect(() => {
-    const storedLastSkill = localStorage.getItem("lastClickedSkill");
-
-    if (storedLastSkill !== null) {
-      setLastClickedSkill(storedLastSkill);
-    }
-  }, []);
-
   return (
-    <>
-      <Header activePageRouter={Page.Projects} />
-      <div className={utilStyles.column}>
-        <div className={styles.projectGroup}>
-          <div className={styles.heading}>Featured Projects</div>
+    <div className={utilStyles.column}>
+      <div className={utilStyles.projectGroup}>
+        <h1>Featured Projects</h1>
 
-          <div className={styles.skillsRow}>
-            {allProjectsSkills.map((skill) => (
-              <div
-                className={`${styles.skill} ${
-                  skill === lastClickedSkill ? styles.skillClicked : ""
-                }`}
-                key={skill}
-              >
-                {skill}
-              </div>
-            ))}
-          </div>
+        <Buttons
+          buttons={allProjectsSkills.map((skill) => ({ label: skill }))}
+        />
 
-          {feauturedProjects.map((project) => (
-            <ImageTextRow {...project} key={project.title} />
-          ))}
-        </div>
+        {feauturedProjects.map((project) => (
+          <ImageTextRow {...project} key={project.title} />
+        ))}
       </div>
-    </>
+    </div>
   );
 }

@@ -1,0 +1,29 @@
+* {
+  font-family: Georgia, serif;
+  color: #000552;
+}
+
+:root {
+  --primary-color: rgb(193, 246, 248);
+  --secondary-color: rgb(96, 156, 245);
+  --background-color: white;
+  --accent-color: #202bf3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 10%;
+}
+
+p {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 40px;
+}

@@ -1,5 +1,6 @@
 export enum Page {
   AboutMe = "About Me",
+  Experiences = "Experiences",
   Projects = "Projects",
   Contact = "Contact",
   Resume = "Resume",
@@ -14,7 +15,7 @@ export type ImageTextRowInfo = {
   imageSrc: string;
   title: string;
   metadata?: string;
-  body: string;
+  body: { [key: string]: string | string[] };
   links?: { [key: string]: string };
   pictureFirst?: boolean;
   priority?: boolean;
@@ -22,7 +23,6 @@ export type ImageTextRowInfo = {
 
 export type ProjectInfo = {
   title: string;
-  disclaimer: string;
   links: { [key: string]: string };
   emilyLink?: string;
   description: ImageTextRowInfo[];

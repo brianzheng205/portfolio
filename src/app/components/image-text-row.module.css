@@ -1,0 +1,55 @@
+.projectPicFirst,
+.projectTextFirst {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projectTextFirst {
+  flex-direction: row-reverse;
+}
+
+.image {
+  margin: 5px 20px;
+  border-radius: 20px;
+  width: "auto";
+  height: "auto";
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Small portrait */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .projectPicFirst,
+  .projectTextFirst {
+    margin: 0px;
+    margin-top: 60px;
+    flex-direction: column;
+  }
+
+  .image {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Small landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .projectPicFirst,
+  .projectTextFirst {
+    margin: 0px;
+    margin-top: 60px;
+  }
+
+  .image {
+    border-radius: 10px;
+    width: 45%;
+    height: auto;
+  }
+}
