@@ -1,3 +1,47 @@
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  gap: 5%;
+  height: 30vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.profile-picture {
+  height: 80%;
+  width: auto;
+  border-radius: 100%;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em 1em;
+}
+
+.info p {
+  margin: 2px 0;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.infoItem h1 {
+  margin: 0;
+  font-size: 35px;
+}
+
+.infoItem p {
+  margin: 0;
+  font-size: 25px;
+}
+
 .colorMIT {
   color: var(--accent-color);
 }
