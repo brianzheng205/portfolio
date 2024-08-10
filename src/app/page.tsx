@@ -79,15 +79,18 @@ export default function AboutMe() {
         in May 2025 with a Bachelor's of Science in Computer Science with a 4.8
         Major GPA and a 4.7 Overall GPA.
       </h1>
+
       <div className={utilStyles.intro}>
         <div>I am looking for a 2025 New Grad Software Engineering role.</div>
         <Link className={styles.link} href="/contact">
           Contact me
         </Link>
       </div>
+
       <div className={styles.instructions}>
         Click on a skill below to see where I've used it.
       </div>
+
       <div className={styles.skillsContainer}>
         {Object.keys(categoryToSkills).map((category) => (
           <div className={styles.list} key={category}>
@@ -96,7 +99,7 @@ export default function AboutMe() {
               skillToProjects[skill] === MIT ? (
                 <div
                   className={`${styles.skill} ${
-                    MITSkillsClicked.has(skill) ? styles.MITSkillClicked : ""
+                    MITSkillsClicked.has(skill) && styles.MITSkillClicked
                   }`}
                   key={skill}
                   onClick={() => handleMITSkillClick(skill)}
@@ -106,7 +109,7 @@ export default function AboutMe() {
               ) : (
                 <Link
                   className={`${styles.skill} ${
-                    projectSkillsClicked.has(skill) ? styles.skillVisited : ""
+                    projectSkillsClicked.has(skill) && styles.skillVisited
                   }`}
                   href={skillToProjects[skill]}
                   key={skill}

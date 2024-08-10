@@ -3,8 +3,6 @@
 import styles from "./image-text-row.module.css";
 
 /**
- * Creates a download button.
- *
  * @param text The text to display on the button.
  * @returns A download button.
  */

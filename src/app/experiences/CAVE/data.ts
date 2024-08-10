@@ -37,14 +37,41 @@ const data: ProjectInfo = {
         `,
       },
     },
-  ],
-  skills: skills,
-  imagesInfo: [
     {
-      src: "",
-      caption: "",
+      imageSrc: "/experiences/CAVE/map.png",
+      title: "Activate Height On Maps",
+      body: {
+        "Mission Purpose": `
+          Many users need to display the height of their map features and would also benefit from the ability
+          to compare measurements of their map features with height.
+        `,
+        Resources: [
+          "React",
+          "Redux",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Git",
+          "VSCode",
+          "Mapbox",
+          "Three.js",
+        ],
+        Journey: `
+          I researched Mapbox's documentation to find a way to create custom layers on the map. I then
+          used Three.js to create 3D objects on the map and linked them to the map features to display
+          their height.
+        `,
+        Results: `
+          The map now has the ability to display the height of map features and users can compare the
+          height of different features. The range of the height of the map features ican be set in the map's
+          legend.
+        `,
+      },
+      pictureFirst: false,
     },
   ],
+  skills: skills,
+  imagesInfo: [],
 };
 
 export default data;

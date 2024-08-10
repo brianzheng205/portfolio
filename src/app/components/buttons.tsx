@@ -3,7 +3,6 @@
 import styles from "./buttons.module.css";
 
 /**
- *
  * @param buttons A list of buttons to render with labels and onClick functions.
  * @returns A container of buttons in a row format.
  */

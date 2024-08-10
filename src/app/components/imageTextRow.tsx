@@ -8,8 +8,6 @@ import Buttons from "./buttons";
 import styles from "./image-text-row.module.css";
 
 /**
- * Creates a row with an image on one side and text on the other.
- *
  * @param imageSrc The source of the image.
  * @param title The title of the text.
  * @param [metadata] The metadata of the text.
