@@ -1,10 +1,10 @@
 "use client";
 
+import ImageTextRow from "../components/imageTextRow";
+
 import utilStyles from "../utils.module.css";
 
 import data from "./data";
-
-import ImageTextRow from "../components/imageTextRow";
 
 export default function Experiences() {
   return (
