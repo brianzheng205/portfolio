@@ -15,7 +15,8 @@ html {
 }
 
 body {
-  margin: 0 10%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 p {
@@ -26,4 +27,13 @@ p {
 h1 {
   margin: 20px 0;
   font-size: 40px;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 95%;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
 }
