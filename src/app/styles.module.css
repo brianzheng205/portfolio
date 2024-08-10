@@ -106,8 +106,15 @@
   color: var(--accent-color);
 }
 
-/* Small portrait */
 @media (max-width: 1024px) and (orientation: portrait) {
+  .infoItem h1 {
+    font-size: 20px;
+  }
+
+  .infoItem p {
+    font-size: 12px;
+  }
+
   .instructions {
     margin-top: 20px;
   }
@@ -117,7 +124,6 @@
   }
 }
 
-/* Small landscape */
 @media (max-width: 1024px) and (orientation: landscape) {
   .instructions {
     margin-top: 20px;
