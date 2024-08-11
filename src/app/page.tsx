@@ -95,7 +95,7 @@ export default function AboutMe() {
             </p>
           </div>
           <div className={styles.infoItem}>
-            <h1>Graduation Date</h1>
+            <h1>Grad Date</h1>
             <p>May 2025</p>
           </div>
           <div className={styles.infoItem}>

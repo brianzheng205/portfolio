@@ -23,7 +23,6 @@
   flex-direction: column;
 }
 
-/* Small portrait */
 @media (max-width: 1024px) and (orientation: portrait) {
   .projectPicFirst,
   .projectTextFirst {
@@ -39,7 +38,6 @@
   }
 }
 
-/* Small landscape */
 @media (max-width: 1024px) and (orientation: landscape) {
   .projectPicFirst,
   .projectTextFirst {

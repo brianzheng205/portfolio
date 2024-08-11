@@ -45,15 +45,13 @@
   border-radius: 20px;
 }
 
-/* Small portrait */
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 700px) and (orientation: portrait) {
   .infoSection {
     margin-top: 20px;
     width: 90%;
   }
 }
 
-/* Small landscape */
 @media (max-width: 1024px) and (orientation: landscape) {
   .header {
     margin-bottom: 20px;
