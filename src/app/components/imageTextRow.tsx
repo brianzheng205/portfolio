@@ -64,11 +64,7 @@ export default function imageTextRow({
         <Buttons
           buttons={Object.keys(links).map((label) => ({
             label: `${label} ➜`,
-            onClick: () => {
-              isLocalPath(links[label])
-                ? (window.location.href = links[label])
-                : window.open(links[label], "_blank", "noopener,noreferrer");
-            },
+            link: links[label],
           }))}
         />
       </div>
@@ -79,7 +75,3 @@ export default function imageTextRow({
 const aspectRatio = 3 / 2;
 export const imageHeight = 300;
 export const imageWidth = imageHeight * aspectRatio;
-
-function isLocalPath(path: string): boolean {
-  return path.startsWith("/");
-}

@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./image-text-row.module.css";
+import styles from "./buttons.module.css";
 
 /**
  * @param text The text to display on the button.
