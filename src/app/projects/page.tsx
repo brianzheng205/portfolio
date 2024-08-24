@@ -1,5 +1,5 @@
-import ImageTextRow from "../components/imageTextRow";
-import Buttons from "../components/buttons";
+import ImageTextRow from "../components/ImageTextRow";
+import Buttons from "../components/Buttons";
 
 import { allProjectsSkills, feauturedProjects } from "./data";
 

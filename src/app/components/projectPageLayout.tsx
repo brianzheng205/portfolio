@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 
-import ImageTextRow, { imageWidth, imageHeight } from "./imageTextRow";
-import Buttons from "./buttons";
+import ImageTextRow, { imageWidth, imageHeight } from "./ImageTextRow";
+import Buttons from "./Buttons";
 
 import { ProjectInfo } from "../types";
 
 import utilStyles from "../utils.module.css";
-import styles from "./project-page-layout.module.css";
+import styles from "./ProjectPageLayout.module.css";
 
 /**
  * Creates a project page.

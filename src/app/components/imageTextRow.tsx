@@ -3,9 +3,9 @@
 import Image from "next/image";
 
 import { ImageTextRowInfo } from "../types";
-import Buttons from "./buttons";
+import Buttons from "./Buttons";
 
-import styles from "./image-text-row.module.css";
+import styles from "./ImageTextRow.module.css";
 
 /**
  * @param imageSrc The source of the image.
@@ -17,7 +17,7 @@ import styles from "./image-text-row.module.css";
  * @param [priority] The boolean that specifies whether the image should be prioritized in loading.
  * @returns A row with an image on one side and text on the other.
  */
-export default function imageTextRow({
+export default function ImageTextRow({
   imageSrc,
   title,
   metadata = "",

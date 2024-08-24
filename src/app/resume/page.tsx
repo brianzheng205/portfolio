@@ -1,4 +1,4 @@
-import Download from "../components/download";
+import Download from "../components/Download";
 
 import utilStyles from "../utils.module.css";
 import styles from "./styles.module.css";

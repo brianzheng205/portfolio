@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./buttons.module.css";
+import styles from "./Buttons.module.css";
 
 /**
  * @param buttons A list of buttons to render with labels and onClick functions.
