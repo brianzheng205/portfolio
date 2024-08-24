@@ -62,12 +62,33 @@ const data: ProjectInfo = {
           their height.
         `,
         Results: `
-          The map now has the ability to display the height of map features and users can compare the
-          height of different features. The range of the height of the map features ican be set in the map's
+          The map can now display the height of map features and users can compare the
+          height of different features. The range of the height of the map features can be set in the map's
           legend.
         `,
       },
       pictureFirst: false,
+    },
+    {
+      imageSrc: "/experiences/CAVE/fast.webp",
+      title: "Optimize Number Inputs",
+      body: {
+        "Mission Purpose": `
+          Updating the number input requires the session to send the update and receive the new value
+          from the server, which can take a few seconds. Many users' experiences would be improved if
+          they could update the number input faster on their session.
+        `,
+        Resources: ["React", "Redux", "JavaScript", "Git", "VSCode"],
+        Journey: `
+          I dug into the number input implementation to find out why the update took so long and found
+          that it was waiting for the server to respond, even if it is the session that sent the update.
+          I changed the behavior of the number input so that the session that updates the number input
+          updates their value first before sending it to the server.
+        `,
+        Results: `
+          The number input is now fast and responsive for the user of the session that updates the number input.
+        `,
+      },
     },
   ],
   skills: skills,
