@@ -59,11 +59,11 @@ export default function ImageTextRow({
               {typeof value === "string" ? (
                 <p>{value}</p>
               ) : (
-                <ul>
-                  {value.map((resource) => (
-                    <li key={resource}>{resource}</li>
-                  ))}
-                </ul>
+                <Buttons
+                  buttons={value.map((resource) => ({
+                    label: resource,
+                  }))}
+                />
               )}
             </div>
           );

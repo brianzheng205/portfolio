@@ -48,6 +48,7 @@ export const data: ImageTextRowInfo[] = [
       `,
       "Major Resources": [
         "Python",
+        "Next.js",
         "React",
         "Redux",
         "TypeScript",
