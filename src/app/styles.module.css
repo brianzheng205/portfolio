@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-.profile-picture {
+.profilePicture {
   height: 80%;
   width: auto;
   border-radius: 100%;
@@ -116,7 +116,7 @@
     gap: 1em;
   }
 
-  .profile-picture {
+  .profilePicture {
     height: 25vh;
   }
 
@@ -154,7 +154,7 @@
     padding: 1em 1em;
   }
 
-  .profile-picture {
+  .profilePicture {
     height: 50vh;
   }
 

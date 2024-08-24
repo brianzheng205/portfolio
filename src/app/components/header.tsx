@@ -25,7 +25,7 @@ export default function Header() {
     <div className={styles.container}>
       <div className={styles.name}>Brian Zheng</div>
 
-      <div className={styles["page-routers"]}>
+      <div className={styles.pageRouters}>
         {Object.keys(pageRouters)
           .reverse()
           .map((label) => {

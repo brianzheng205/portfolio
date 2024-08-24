@@ -74,7 +74,7 @@ export default function AboutMe() {
           alt="Profile Picture"
           width={200}
           height={200}
-          className={styles["profile-picture"]}
+          className={styles.profilePicture}
         />
 
         <div className={styles.info}>
