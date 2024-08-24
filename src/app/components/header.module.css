@@ -8,7 +8,6 @@
   padding: 0.5em 0 0.2em 0;
   font-size: 20px;
   background-color: rgb(71, 71, 71);
-  border-bottom: 2px solid var(--accent-color);
 }
 
 .name {
@@ -29,6 +28,7 @@
 
 .pageRouters a {
   text-decoration: none;
+  font-weight: bold;
 }
 
 .active {
