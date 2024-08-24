@@ -1,13 +1,12 @@
 * {
-  font-family: Georgia, serif;
-  color: #000552;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 :root {
-  --primary-color: rgb(193, 246, 248);
-  --secondary-color: rgb(96, 156, 245);
-  --background-color: white;
-  --accent-color: #202bf3;
+  --primary-color: rgb(96, 156, 245);
+  --background-color: rgb(41, 41, 41);
+  --accent-color: #208df3;
 }
 
 html {
@@ -15,8 +14,7 @@ html {
 }
 
 body {
-  width: 80%;
-  margin: 0 auto;
+  margin: 0 0;
 }
 
 p {
@@ -25,8 +23,13 @@ p {
 }
 
 h1 {
+  font-size: 60px;
   margin: 20px 0;
+}
+
+h2 {
   font-size: 40px;
+  margin: 20px 0;
 }
 
 @media (max-width: 700px) {

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import ImageTextRow, { imageWidth, imageHeight } from "./ImageTextRow";
+import ImageTextRow, { IMAGE_WIDTH, IMAGE_HEIGHT } from "./ImageTextRow";
 import Buttons from "./Buttons";
 
 import { ProjectInfo } from "../types";
@@ -88,8 +88,8 @@ export default function ProjectPageLayout({
                 className={styles.image}
                 src={imageInfo.src}
                 alt={imageInfo.caption}
-                width={imageWidth}
-                height={imageHeight}
+                width={IMAGE_WIDTH}
+                height={IMAGE_HEIGHT}
               />
               {imageInfo.caption}
             </div>
