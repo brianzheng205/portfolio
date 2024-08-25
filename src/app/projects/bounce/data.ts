@@ -1,11 +1,11 @@
 import { ProjectInfo } from "../../types";
 
 export const description = `
-  Bounce is a full-stack web app, powered by React, TypeScript, and AWS, offering users 
-  an efficient platform to track recipes and manage to-do tasks. With a Recipe Dashboard 
+  Bounce is a full-stack web app, powered by React, TypeScript, and AWS, offering college 
+  students an efficient platform to track recipes and manage to-do tasks. With a Recipe Dashboard 
   enabling recipe management and real-time sorting based on available ingredients, and 
   automatic task prioritization based on deadlines and duration, Bounce ensures seamless 
-  organization and productivity. Data persistence is achieved through back-end database 
+  organization and productivity. Data persistence is achieved through backend database 
   connectivity, enhancing user experience and convenience.
 `;
 

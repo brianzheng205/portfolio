@@ -1,6 +1,10 @@
 import { ImageTextRowInfo } from "../types";
-import { majorSkills as CAVEMajorSkills } from "./CAVE/data";
 import {
+  description as CAVEDescription,
+  majorSkills as CAVEMajorSkills,
+} from "./CAVE/data";
+import {
+  description as CSAILDescription,
   majorSkills as CSAILMajorSkills,
   ideaNavigatorLinks,
 } from "./CSAIL/data";
@@ -11,10 +15,10 @@ export const data: ImageTextRowInfo[] = [
     title: "MIT CAVE Lab",
     metadata: "May 2024 — Present",
     body: {
-      "Organization Overview": `
-        Many users including researchers and private companies use CAVE Lab's products for
-        data analysis and visualization. These products are constantly being updated and
-        require new features and bug fixes.
+      Overview:
+        CAVEDescription +
+        `
+        The web app is constantly updated and requires new features and bug fixes.
       `,
       "Major Resources": CAVEMajorSkills,
       Journey: `
@@ -38,11 +42,7 @@ export const data: ImageTextRowInfo[] = [
     title: "MIT Computer Science & Artificial Intelligence Laboratory (CSAIL)",
     metadata: "May 2023 — September 2023",
     body: {
-      "Organization Overview": `
-        As AI becomes prevalent in software applications, MIT Professor Kellis has a vision to
-        develop a web application to help users organize, visualize, and access their data
-        with the power of AI.
-      `,
+      Overview: CSAILDescription,
       "Major Resources": CSAILMajorSkills,
       Journey: `
         I worked in Professor Kellis's team to write Python scripts to automate and optimize

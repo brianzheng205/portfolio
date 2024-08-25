@@ -12,16 +12,15 @@ export const feauturedProjects: ImageTextRowInfo[] = [
     title: "Bounce (by Emily Liew)",
     metadata: "June 2023 — September 2023",
     body: {
-      "Mission Purpose": `
-        College students have a lot of their plates and need a way to manage their tasks and
-        meal preps.
-      `,
-      Resources: bounceMajorSkills,
+      Overview: bounceDescription,
+      "Major Resources": bounceMajorSkills,
       Journey: `
         I implemented many features and styled the web app to fit the needs of college students
-        using React, Redux, TypeScript, and CSS.
+        using React, TypeScript, and CSS.
       `,
-      Results: bounceDescription,
+      Results: `
+        Bounce has been successfully implemented and styled to fit the needs of college students.
+      `,
     },
     links: {
       ...bounceLinks,

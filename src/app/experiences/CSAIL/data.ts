@@ -1,5 +1,12 @@
 import { ProjectInfo } from "@/app/types";
 
+export const description = `
+  CSAIL works on many projects, one of which is Idea Navigator, an interactive
+  web app to automatically label and sort thousands of data points onto an intuitive
+  canvas. Once the data is uploaded, users can efficiently sift through the data,
+  summarize information, and ask questions about the data with the help of AI.
+`;
+
 export const majorSkills = [
   "Python",
   "Next.js",
@@ -18,7 +25,7 @@ export const ideaNavigatorLinks = {
 const projectInfo: ProjectInfo = {
   title: "MIT CSAIL",
   links: ideaNavigatorLinks,
-  description: "",
+  description: description,
   skills: majorSkills,
   contributions: [
     {

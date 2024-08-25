@@ -1,5 +1,11 @@
 import { ProjectInfo } from "@/app/types";
 
+export const description = `
+  The CAVE Lab maintains a web app that allows users with minimal coding
+  experience to create data-visualization web apps with a simple Python
+  API.
+`;
+
 export const majorSkills = [
   "React",
   "Redux",
@@ -12,7 +18,7 @@ export const majorSkills = [
 const data: ProjectInfo = {
   title: "MIT CAVE Lab",
   links: {},
-  description: [],
+  description: description,
   skills: majorSkills,
   contributions: [
     {
