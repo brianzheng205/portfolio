@@ -18,7 +18,7 @@ export const ideaNavigatorLinks = {
 const projectInfo: ProjectInfo = {
   title: "MIT CSAIL",
   links: ideaNavigatorLinks,
-  description: [],
+  description: "",
   skills: majorSkills,
   contributions: [
     {

@@ -42,6 +42,10 @@
   background-color: var(--accent-color);
 }
 
+.description {
+  width: 70%;
+}
+
 /* Small portrait */
 @media (max-width: 1024px) and (orientation: portrait) {
   .image {

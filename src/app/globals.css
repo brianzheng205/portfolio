@@ -15,22 +15,22 @@ html {
 }
 
 body {
-  margin: 0 0;
+  margin: 0;
 }
 
 p {
-  margin-top: 5px;
   font-size: 18px;
+  margin: 0;
 }
 
 h1 {
   font-size: 60px;
-  margin: 20px 0;
+  margin: 0.2em 0;
 }
 
 h2 {
   font-size: 40px;
-  margin: 20px 0;
+  margin: 0.5em 0;
 }
 
 @media (max-width: 700px) {

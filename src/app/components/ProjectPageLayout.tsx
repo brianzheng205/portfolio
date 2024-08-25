@@ -35,6 +35,9 @@ export default function ProjectPageLayout({
     <div className={utilStyles.column}>
       <div className={utilStyles.projectGroup}>
         <h1>{title}</h1>
+
+        <p className={styles.description}>{description}</p>
+
         <div className={styles.buttonsRow}>
           {Object.keys(links).map((label) => (
             <a
@@ -49,27 +52,14 @@ export default function ProjectPageLayout({
           ))}
         </div>
 
-        {description.map((section) => {
-          numImagesRendered++;
-          return (
-            <ImageTextRow
-              key={section.title}
-              {...section}
-              priority={numImagesRendered <= 2}
-            />
-          );
-        })}
-      </div>
-
-      <div className={utilStyles.projectGroup} id="contributions">
-        <h1>My Contributions</h1>
-
         <Buttons
           buttons={skills.map((skill) => ({
             label: skill,
           }))}
         />
+      </div>
 
+      <div className={utilStyles.projectGroup}>
         {contributions.map((mission) => {
           numImagesRendered++;
           return (

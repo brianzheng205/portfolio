@@ -38,6 +38,7 @@ export default function ImageTextRow({
     >
       <div className={styles.imageContainer}>
         <h2>{title}</h2>
+
         {metadata !== "" && <p>{metadata}</p>}
 
         <Image

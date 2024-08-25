@@ -49,7 +49,7 @@ export const data: ImageTextRowInfo[] = [
         XML data processing and label generation and to develop a web app to visualize
         complex datasets.
       `,
-      Results: `Mus
+      Results: `
         Professor Kellis's application has been largely implemented in terms of UI/UX design
         with a few example datasets that can now be automatically updated with ease.
       `,

@@ -25,7 +25,7 @@ export type ProjectInfo = {
   title: string;
   links: { [key: string]: string };
   emilyLink?: string;
-  description: ImageTextRowInfo[];
+  description: string;
   skills: string[];
   contributions: ImageTextRowInfo[];
   imagesInfo: ImageInfo[];

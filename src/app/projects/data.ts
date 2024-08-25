@@ -1,4 +1,5 @@
 import {
+  description as bounceDescription,
   links as bounceLinks,
   majorSkills as bounceMajorSkills,
 } from "./bounce/data";
@@ -20,14 +21,7 @@ export const feauturedProjects: ImageTextRowInfo[] = [
         I implemented many features and styled the web app to fit the needs of college students
         using React, Redux, TypeScript, and CSS.
       `,
-      Results: `
-        Bounce is a full-stack web app, powered by React, TypeScript, and AWS, offering users 
-        an efficient platform to track recipes and manage to-do tasks. With a Recipe Dashboard 
-        enabling recipe management and real-time sorting based on available ingredients, and 
-        automatic task prioritization based on deadlines and duration, Bounce ensures seamless 
-        organization and productivity. Data persistence is achieved through back-end database 
-        connectivity, enhancing user experience and convenience.
-      `,
+      Results: bounceDescription,
     },
     links: {
       ...bounceLinks,
