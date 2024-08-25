@@ -7,12 +7,12 @@ export const ideaNavigatorLinks = {
 };
 
 const projectInfo: ProjectInfo = {
-  title: "Idea Navigator (by CSAIL)",
+  title: "MIT CSAIL",
   links: ideaNavigatorLinks,
   description: [],
   contributions: [
     {
-      imageSrc: "/ideaNavigator/filter.png",
+      imageSrc: "/experiences/CSAIL/filter.png",
       title: "Optimize Data Parsing",
       body: {
         "Mission Purpose": `
@@ -38,7 +38,7 @@ const projectInfo: ProjectInfo = {
       },
     },
     {
-      imageSrc: "/ideaNavigator/chatGPT.png",
+      imageSrc: "/experiences/CSAIL/chatGPT.png",
       title: "Generate Labels using ChatGPT",
       body: {
         "Mission Purpose": `
@@ -63,7 +63,7 @@ const projectInfo: ProjectInfo = {
       },
     },
     {
-      imageSrc: "/UI.png",
+      imageSrc: "/experiences/CSAIL/UI.png",
       title: "Implement Idea Navigator's Frontend",
       body: {
         "Mission Purpose": `
@@ -105,15 +105,15 @@ const projectInfo: ProjectInfo = {
   ),
   imagesInfo: [
     {
-      src: "/ideaNavigator/loading.png",
+      src: "/experiences/CSAIL/loading.png",
       caption: "Loading Screen",
     },
     {
-      src: "/ideaNavigator/citationLines.png",
+      src: "/experiences/CSAIL/citationLines.png",
       caption: "Citation Lines",
     },
     {
-      src: "/ideaNavigator/filterByYear.png",
+      src: "/experiences/CSAIL/filterByYear.png",
       caption: "Filter By Year",
     },
   ],

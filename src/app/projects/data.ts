@@ -1,5 +1,4 @@
 import { allProjects, skillToProjects } from "../data";
-import { ideaNavigatorLinks } from "./ideaNavigator/data";
 import { bounceLinks } from "./bounce/data";
 
 import { ImageTextRowInfo } from "../types";
@@ -9,41 +8,6 @@ export const allProjectsSkills = Object.keys(skillToProjects).filter(
 );
 
 export const feauturedProjects: ImageTextRowInfo[] = [
-  {
-    imageSrc: "/ideaNavigator/papersNavigator.png",
-    title: "Idea Navigator",
-    metadata: "May 2023 — September 2023",
-    body: {
-      "Mission Purpose": `
-        Many users can benefit from an AI-powered tool to help organize, navigate, and cluster
-        their data.
-      `,
-      Resources: [
-        "Python",
-        "React",
-        "Redux",
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "Git",
-        "VSCode",
-        "ThreeJS",
-      ],
-      Journey: `
-        I worked in Professor Kellis's team to write Python scripts to automate and optimize
-        XML data processing and label generation and to develop a web app to visualize
-        complex datasets.
-      `,
-      Results: `
-        Idea Navigator has been largely implemented in terms of UI/UX design
-        with a few example datasets that can now be automatically updated with ease.
-      `,
-    },
-    links: {
-      ...ideaNavigatorLinks,
-      "Learn More": "/projects/ideaNavigator",
-    },
-  },
   {
     imageSrc: "/bounce/recipes.png",
     title: "Bounce (by Emily Liew)",

@@ -69,7 +69,7 @@ export const data: ImageTextRowInfo[] = [
     },
     links: {
       Lab: "https://compbio.mit.edu/",
-      "Learn More": "/projects/ideaNavigator",
+      "Learn More": "/experiences/CSAIL",
     },
     pictureFirst: false,
   },
