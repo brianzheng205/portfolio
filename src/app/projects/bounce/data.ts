@@ -1,17 +1,25 @@
-import { skillToProjects, allProjects, bounce } from "../../data";
-
 import { ProjectInfo } from "../../types";
 
-export const bounceLinks = {
+export const links = {
   Website: "https://main.d2ngor7ea7fphp.amplifyapp.com/",
   GitHub: "https://github.com/emilyy-liew/bounce/tree/main",
   "Emily's Portfolio": "https://emily-liew-portfolio.vercel.app/",
 };
 
+export const majorSkills = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "Git",
+];
+
 const projectInfo: ProjectInfo = {
   title: "Bounce (by Emily Liew)",
-  links: bounceLinks,
+  links: links,
   description: [],
+  skills: majorSkills,
   contributions: [
     {
       imageSrc: "/bounce/transition.gif",
@@ -20,15 +28,7 @@ const projectInfo: ProjectInfo = {
         "Mission Purpose": `
           Bounce has many features and UI elements that need to be implemented.
         `,
-        Resources: [
-          "Next.js",
-          "React",
-          "TypeScript",
-          "HTML",
-          "CSS",
-          "VSCode",
-          "Git",
-        ],
+        Resources: majorSkills,
         Journey: `
           I implemented an icon bar on the web app, offering users a convenient means 
           of accessing various sections of Bounce. Each icon corresponds to a specific 
@@ -57,15 +57,7 @@ const projectInfo: ProjectInfo = {
           paper publication dates, requiring another parse through all 200 GB which takes
           several hours. We want to extract new data more efficiently.
         `,
-        Resources: [
-          "Next.js",
-          "React",
-          "TypeScript",
-          "HTML",
-          "CSS",
-          "VSCode",
-          "Git",
-        ],
+        Resources: majorSkills,
         Journey: `
           I created animated collapsible text boxes, ensuring a 
           seamless transition when users expand or collapse them. Additionally, 
@@ -79,11 +71,6 @@ const projectInfo: ProjectInfo = {
       },
     },
   ],
-  skills: Object.keys(skillToProjects).filter(
-    (skill) =>
-      skillToProjects[skill] === allProjects ||
-      skillToProjects[skill] === bounce
-  ),
   imagesInfo: [
     {
       src: "/bounce/tasks.png",

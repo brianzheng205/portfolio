@@ -8,7 +8,7 @@ import { Page } from "../types";
 import styles from "./Header.module.css";
 
 const pageRouters: { [key in Page]: string } = {
-  "About Me": "/",
+  About: "/",
   Experiences: "/experiences",
   Projects: "/projects",
   Contact: "/contact",
@@ -26,23 +26,21 @@ export default function Header() {
       <div className={styles.name}>Brian Zheng</div>
 
       <div className={styles.pageRouters}>
-        {Object.keys(pageRouters)
-          .reverse()
-          .map((label) => {
-            const pageKey = label as Page;
-            const route = pageRouters[pageKey];
+        {Object.keys(pageRouters).map((label) => {
+          const pageKey = label as Page;
+          const route = pageRouters[pageKey];
 
-            return (
-              <div key={label}>
-                <Link
-                  className={route === path ? styles.active : styles.inactive}
-                  href={route}
-                >
-                  {label}
-                </Link>
-              </div>
-            );
-          })}
+          return (
+            <div key={label}>
+              <Link
+                className={route === path ? styles.active : styles.inactive}
+                href={route}
+              >
+                {label}
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

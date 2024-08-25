@@ -1,11 +1,9 @@
-import { allProjects, skillToProjects } from "../data";
-import { bounceLinks } from "./bounce/data";
+import {
+  links as bounceLinks,
+  majorSkills as bounceMajorSkills,
+} from "./bounce/data";
 
 import { ImageTextRowInfo } from "../types";
-
-export const allProjectsSkills = Object.keys(skillToProjects).filter(
-  (key) => skillToProjects[key] === allProjects
-);
 
 export const feauturedProjects: ImageTextRowInfo[] = [
   {
@@ -17,15 +15,7 @@ export const feauturedProjects: ImageTextRowInfo[] = [
         College students have a lot of their plates and need a way to manage their tasks and
         meal preps.
       `,
-      Resources: [
-        "React",
-        "Redux",
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "Git",
-        "VSCode",
-      ],
+      Resources: bounceMajorSkills,
       Journey: `
         I implemented many features and styled the web app to fit the needs of college students
         using React, Redux, TypeScript, and CSS.

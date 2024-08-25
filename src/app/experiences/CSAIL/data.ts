@@ -1,6 +1,15 @@
-import { skillToProjects, allProjects, ideaNavigator } from "../../data";
+import { ProjectInfo } from "@/app/types";
 
-import { ProjectInfo } from "../../types";
+export const majorSkills = [
+  "Python",
+  "Next.js",
+  "React",
+  "Redux",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "Git",
+];
 
 export const ideaNavigatorLinks = {
   Lab: "http://compbio.mit.edu/",
@@ -10,7 +19,42 @@ const projectInfo: ProjectInfo = {
   title: "MIT CSAIL",
   links: ideaNavigatorLinks,
   description: [],
+  skills: majorSkills,
   contributions: [
+    {
+      imageSrc: "/experiences/CSAIL/UI.png",
+      title: "Implement Idea Navigator's Frontend",
+      body: {
+        "Mission Purpose": `
+          Idea Navigator needs to be implemented with relevant features and
+          a user-friendly interface to facilitate data exploration and analysis.
+        `,
+        Resources: [
+          "Three.js",
+          "React",
+          "Redux",
+          "TypeScript",
+          "HTML",
+          "CSS",
+          "Git",
+        ],
+        Journey: `
+          I implemented a series of enhancements aimed at optimizing user experience. 
+          I introduced a loading screen to provide users with a responsive perception 
+          during page redirections, ensuring a seamless transition. I implemented line 
+          drawing functionality, enabling users to effortlessly trace citations and 
+          references of the currently selected papers, enriching the exploration process. 
+          I also drew lines to convey semantic information of the papers and meetings 
+          data points. Additionally, I introduced year-based filtering, empowering 
+          users to distill data visualization for improved clarity and insights.
+        `,
+        Results: `
+          Idea Navigator is much closer to being finished and user experience has been
+          improved significantly.
+        `,
+      },
+      pictureFirst: false,
+    },
     {
       imageSrc: "/experiences/CSAIL/filter.png",
       title: "Optimize Data Parsing",
@@ -21,7 +65,7 @@ const projectInfo: ProjectInfo = {
           paper publication dates, requiring another parse through all 200 GB which takes
           several hours. We want to extract new data more efficiently.
         `,
-        Resources: ["Python", "VSCode", "Git", "XML"],
+        Resources: ["Python", "XML", "Git"],
         Journey: `
           The existing parser only extracted specific details from a subset of papers 
           (around 43,000 out of millions). This required us to parse all 200 GB of research
@@ -61,48 +105,9 @@ const projectInfo: ProjectInfo = {
           was optimized to improve performance.
         `,
       },
-    },
-    {
-      imageSrc: "/experiences/CSAIL/UI.png",
-      title: "Implement Idea Navigator's Frontend",
-      body: {
-        "Mission Purpose": `
-          Idea Navigator needs to be implemented with relevant features and
-          a user-friendly interface to facilitate data exploration and analysis.
-        `,
-        Resources: [
-          "React",
-          "Redux",
-          "TypeScript",
-          "HTML",
-          "CSS",
-          "Git",
-          "VSCode",
-          "ThreeJS",
-        ],
-        Journey: `
-          I implemented a series of enhancements aimed at optimizing user experience. 
-          I introduced a loading screen to provide users with a responsive perception 
-          during page redirections, ensuring a seamless transition. I implemented line 
-          drawing functionality, enabling users to effortlessly trace citations and 
-          references of the currently selected papers, enriching the exploration process. 
-          I also drew lines to convey semantic information of the papers and meetings 
-          data points. Additionally, I introduced year-based filtering, empowering 
-          users to distill data visualization for improved clarity and insights.
-        `,
-        Results: `
-          Idea Navigator is much closer to being finished and user experience has been
-          improved significantly.
-        `,
-      },
       pictureFirst: false,
     },
   ],
-  skills: Object.keys(skillToProjects).filter(
-    (skill) =>
-      skillToProjects[skill] === allProjects ||
-      skillToProjects[skill] === ideaNavigator
-  ),
   imagesInfo: [
     {
       src: "/experiences/CSAIL/loading.png",

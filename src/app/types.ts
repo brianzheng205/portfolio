@@ -1,5 +1,5 @@
 export enum Page {
-  AboutMe = "About Me",
+  About = "About",
   Experiences = "Experiences",
   Projects = "Projects",
   Contact = "Contact",
@@ -26,7 +26,7 @@ export type ProjectInfo = {
   links: { [key: string]: string };
   emilyLink?: string;
   description: ImageTextRowInfo[];
-  contributions: ImageTextRowInfo[];
   skills: string[];
+  contributions: ImageTextRowInfo[];
   imagesInfo: ImageInfo[];
 };
