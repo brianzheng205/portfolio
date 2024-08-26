@@ -2,13 +2,6 @@
   background-color: var(--background-color);
 }
 
-.intro {
-  margin-top: 10px;
-  font-size: 22px;
-  text-align: center;
-  font-style: italic;
-}
-
 .column {
   width: 90%;
   display: flex;
@@ -48,12 +41,5 @@
   .infoSection {
     margin-top: 20px;
     width: 90%;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .header {
-    margin-bottom: 20px;
-    font-size: 18px;
   }
 }

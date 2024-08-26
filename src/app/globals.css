@@ -32,15 +32,3 @@ h2 {
   font-size: 40px;
   margin: 0.5em 0;
 }
-
-@media (max-width: 700px) {
-  body {
-    width: 95%;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  body {
-    width: 95%;
-  }
-}

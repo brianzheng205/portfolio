@@ -20,10 +20,6 @@ export default function About() {
 
         <div className={styles.info}>
           <div className={styles.infoItem}>
-            <h1>Name</h1>
-            <p>Brian Zheng</p>
-          </div>
-          <div className={styles.infoItem}>
             <h1>Education</h1>
             <p>MIT</p>
           </div>
@@ -36,20 +32,46 @@ export default function About() {
             <p>Computer Science</p>
           </div>
           <div className={styles.infoItem}>
-            <h1>Overall GPA</h1>
-            <p>4.8</p>
-          </div>
-          <div className={styles.infoItem}>
-            <h1>Major GPA</h1>
+            <h1>GPA</h1>
             <p>4.7</p>
           </div>
         </div>
       </div>
 
-      <div className={utilStyles.intro}>
-        <div>I am looking for a 2025 New Grad Software Engineering role.</div>
+      <h2>I am looking for a 2025 New Grad Software Engineering role.</h2>
+
+      <div className={styles.linksContainer}>
+        <Link className={styles.link} href="/experiences">
+          <h2>Experiences</h2>
+          <Image
+            src="/company.png"
+            alt="Briefcase"
+            width={200}
+            height={200}
+            className={styles.linkPicture}
+          />
+        </Link>
+
+        <Link className={styles.link} href="/projects">
+          <h2>Projects</h2>
+          <Image
+            src="/briefcase.png"
+            alt="Briefcase"
+            width={200}
+            height={200}
+            className={styles.linkPicture}
+          />
+        </Link>
+
         <Link className={styles.link} href="/contact">
-          Contact me
+          <h2>Contact Me</h2>
+          <Image
+            src="/briefcase.png"
+            alt="Briefcase"
+            width={200}
+            height={200}
+            className={styles.linkPicture}
+          />
         </Link>
       </div>
     </div>
