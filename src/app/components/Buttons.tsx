@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import styles from "./buttons.module.css";
+import styles from "./Buttons.module.css";
 
 /**
  * @param buttons A list of buttons to render with `label` and optionally a `link`.

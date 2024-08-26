@@ -1,4 +1,4 @@
-import ProjectPageLayout from "@/app/components/projectPageLayout";
+import ProjectPageLayout from "@/app/components/ProjectPageLayout";
 
 import data from "./data";
 

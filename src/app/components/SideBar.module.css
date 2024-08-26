@@ -1,0 +1,66 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+  background-color: var(--primary-color);
+  border-radius: 0 5px 5px 0;
+  height: 180px;
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  width: 40px;
+  opacity: 1;
+  transition: width 0.2s ease, opacity 0.2s ease;
+  overflow: hidden;
+}
+
+.iconsContainer.collapsed {
+  width: 0;
+  opacity: 0;
+}
+
+.icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.verticalLine {
+  width: 1px;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.verticalLine.collapsed {
+  width: 0;
+  opacity: 0;
+}
+
+.toggleButtonContainer {
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}

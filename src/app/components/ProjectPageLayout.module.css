@@ -30,7 +30,7 @@
 
 .button {
   padding: 10px 15px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   font-size: 18px;
   text-align: center;
   border-radius: 1em;
@@ -40,6 +40,10 @@
 
 .button:hover {
   background-color: var(--accent-color);
+}
+
+.description {
+  width: 70%;
 }
 
 /* Small portrait */

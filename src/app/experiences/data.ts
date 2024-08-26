@@ -1,4 +1,13 @@
 import { ImageTextRowInfo } from "../types";
+import {
+  description as CAVEDescription,
+  majorSkills as CAVEMajorSkills,
+} from "./CAVE/data";
+import {
+  description as CSAILDescription,
+  majorSkills as CSAILMajorSkills,
+  ideaNavigatorLinks,
+} from "./CSAIL/data";
 
 export const data: ImageTextRowInfo[] = [
   {
@@ -6,20 +15,12 @@ export const data: ImageTextRowInfo[] = [
     title: "MIT CAVE Lab",
     metadata: "May 2024 — Present",
     body: {
-      "Organization Overview": `
-        Many users including researchers and private companies use CAVE Lab's products for
-        data analysis and visualization. These products are constantly being updated and
-        require new features and bug fixes.
+      Overview:
+        CAVEDescription +
+        `
+        The web app is constantly updated and requires new features and bug fixes.
       `,
-      "Major Resources": [
-        "React",
-        "Redux",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Git",
-        "VSCode",
-      ],
+      "Major Resources": CAVEMajorSkills,
       Journey: `
         I implemented many features and fixed many bugs in React applications. I learned a lot
         about the tech stack and gained experience in React libraries such as Three.js and map-react-gl.
@@ -41,34 +42,21 @@ export const data: ImageTextRowInfo[] = [
     title: "MIT Computer Science & Artificial Intelligence Laboratory (CSAIL)",
     metadata: "May 2023 — September 2023",
     body: {
-      "Organization Overview": `
-        As AI becomes prevalent in software applications, MIT Professor Kellis has a vision to
-        develop a web application to help users organize, visualize, and access their data
-        with the power of AI.
-      `,
-      "Major Resources": [
-        "Python",
-        "React",
-        "Redux",
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "Git",
-        "VSCode",
-      ],
+      Overview: CSAILDescription,
+      "Major Resources": CSAILMajorSkills,
       Journey: `
         I worked in Professor Kellis's team to write Python scripts to automate and optimize
         XML data processing and label generation and to develop a web app to visualize
         complex datasets.
       `,
-      Results: `Mus
+      Results: `
         Professor Kellis's application has been largely implemented in terms of UI/UX design
         with a few example datasets that can now be automatically updated with ease.
       `,
     },
     links: {
-      Lab: "https://compbio.mit.edu/",
-      "Learn More": "/projects/ideaNavigator",
+      ...ideaNavigatorLinks,
+      "Learn More": "/experiences/CSAIL",
     },
     pictureFirst: false,
   },

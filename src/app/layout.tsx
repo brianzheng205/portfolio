@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
-import Header from "./components/header";
+import Header from "./components/Header";
+import SideBar from "./components/SideBar";
 
 import "./globals.css";
 import utilStyles from "./utils.module.css";
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en" id="top">
       <body className={`${utilStyles.container}`}>
         <Header />
+        <SideBar />
         {children}
       </body>
     </html>

@@ -1,13 +1,13 @@
 * {
-  font-family: Georgia, serif;
-  color: #000552;
+  font-family: "Georgia", serif;
+  color: rgb(255, 255, 255);
 }
 
 :root {
-  --primary-color: rgb(193, 246, 248);
-  --secondary-color: rgb(96, 156, 245);
-  --background-color: white;
-  --accent-color: #202bf3;
+  --primary-color: rgb(96, 156, 245);
+  --secondary-color: rgb(194, 72, 72);
+  --background-color: rgb(41, 41, 41);
+  --accent-color: #208df3;
 }
 
 html {
@@ -15,15 +15,20 @@ html {
 }
 
 body {
-  margin: 0 10%;
+  margin: 0;
 }
 
 p {
-  margin-top: 5px;
   font-size: 18px;
+  margin: 0;
 }
 
 h1 {
-  margin: 20px 0;
+  font-size: 60px;
+  margin: 0.2em 0;
+}
+
+h2 {
   font-size: 40px;
+  margin: 0.5em 0;
 }

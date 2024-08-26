@@ -5,14 +5,12 @@ import { usePathname } from "next/navigation";
 
 import { Page } from "../types";
 
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 
 const pageRouters: { [key in Page]: string } = {
-  "About Me": "/",
+  About: "/",
   Experiences: "/experiences",
   Projects: "/projects",
-  Contact: "/contact",
-  Resume: "/resume",
 };
 
 /**
@@ -25,22 +23,22 @@ export default function Header() {
     <div className={styles.container}>
       <div className={styles.name}>Brian Zheng</div>
 
-      <div className={styles["page-routers"]}>
-        {Object.keys(pageRouters)
-          .reverse()
-          .map((label) => {
-            const pageKey = label as Page;
-            const route = pageRouters[pageKey];
+      <div className={styles.pageRouters}>
+        {Object.keys(pageRouters).map((label) => {
+          const pageKey = label as Page;
+          const route = pageRouters[pageKey];
 
-            return (
-              <div
-                key={label}
+          return (
+            <div key={label}>
+              <Link
                 className={route === path ? styles.active : styles.inactive}
+                href={route}
               >
-                <Link href={route}>{label}</Link>
-              </div>
-            );
-          })}
+                {label}
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
