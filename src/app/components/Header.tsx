@@ -11,8 +11,6 @@ const pageRouters: { [key in Page]: string } = {
   About: "/",
   Experiences: "/experiences",
   Projects: "/projects",
-  Contact: "/contact",
-  Resume: "/resume",
 };
 
 /**

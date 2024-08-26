@@ -2,8 +2,6 @@ export enum Page {
   About = "About",
   Experiences = "Experiences",
   Projects = "Projects",
-  Contact = "Contact",
-  Resume = "Resume",
 }
 
 export type ImageInfo = {

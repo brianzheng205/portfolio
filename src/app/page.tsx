@@ -62,17 +62,6 @@ export default function About() {
             className={styles.linkPicture}
           />
         </Link>
-
-        <Link className={styles.link} href="/contact">
-          <h2>Contact Me</h2>
-          <Image
-            src="/briefcase.png"
-            alt="Briefcase"
-            width={200}
-            height={200}
-            className={styles.linkPicture}
-          />
-        </Link>
       </div>
     </div>
   );

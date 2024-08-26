@@ -2,18 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em 2em;
   gap: 3em;
   height: 40vh;
-  width: 80vw;
-  border-radius: 20px;
-  box-sizing: border-box;
-  border: 2px solid var(--accent-color);
-}
-
-.linkPicture {
-  border-radius: 100%;
-  background-color: var(--primary-color);
 }
 
 .profilePicture {
@@ -69,11 +59,19 @@
   text-decoration: none;
 }
 
+.link:hover {
+  transform: scale(1.05);
+}
+
+.linkPicture {
+  border-radius: 100%;
+  background-color: var(--primary-color);
+}
+
 @media (max-width: 1024px) and (orientation: portrait) {
   .profile {
     flex-direction: column;
     height: auto;
-    padding: 1em 1em;
     gap: 1em;
   }
 
@@ -112,7 +110,6 @@
   .profile {
     height: auto;
     gap: 1em;
-    padding: 1em 1em;
   }
 
   .profilePicture {
