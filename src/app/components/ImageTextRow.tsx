@@ -73,24 +73,10 @@ export default function ImageTextRow({
         <Buttons
           buttons={Object.keys(links).map((label) => ({
             label: `${label} ➜`,
-            onClick: () => {
-              isLocalPath(links[label])
-                ? (window.location.href = links[label])
-                : window.open(links[label], "_blank", "noopener,noreferrer");
-            },
+            link: links[label],
           }))}
         />
       </div>
     </div>
   );
-}
-
-/**
- * Checks if a given path is local.
- *
- * @param {string} path - the path to check
- * @return {boolean} true if the path is local, false otherwise
- */
-function isLocalPath(path: string): boolean {
-  return path.startsWith("/");
 }
