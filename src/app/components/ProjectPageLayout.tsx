@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import ImageTextRow, { IMAGE_WIDTH, IMAGE_HEIGHT } from "./ImageTextRow";
