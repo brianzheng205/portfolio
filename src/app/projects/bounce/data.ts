@@ -1,6 +1,6 @@
 import { ProjectInfo } from "../../types";
 
-export const description = `
+const description = `
   Bounce is a full-stack web app, powered by React, TypeScript, and AWS, offering college 
   students an efficient platform to track recipes and manage to-do tasks. With a Recipe Dashboard 
   enabling recipe management and real-time sorting based on available ingredients, and 
@@ -9,25 +9,18 @@ export const description = `
   connectivity, enhancing user experience and convenience.
 `;
 
-export const links = {
+const links = {
   Website: "https://main.d2ngor7ea7fphp.amplifyapp.com/",
   GitHub: "https://github.com/emilyy-liew/bounce/tree/main",
   "Emily's Portfolio": "https://emily-liew-portfolio.vercel.app/",
 };
 
-export const majorSkills = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "HTML",
-  "CSS",
-  "Git",
-];
+const majorSkills = ["Next.js", "React", "TypeScript", "HTML", "CSS", "Git"];
 
-const projectInfo: ProjectInfo = {
+export const projectInfo: ProjectInfo = {
   title: "Bounce (by Emily Liew)",
-  links: links,
-  description: description,
+  links,
+  description,
   skills: majorSkills,
   contributions: [
     {
@@ -42,10 +35,10 @@ const projectInfo: ProjectInfo = {
           I implemented an icon bar on the web app, offering users a convenient means 
           of accessing various sections of Bounce. Each icon corresponds to a specific 
           page: the To-Do List, Recipes and Ingredients management, and the login page.
-          Upon clicking an icon, users are seamlessly 
-          redirected to the associated page. Additionally, I integrated a loading 
-          screen that is displayed during the initial page load, ensuring a smooth 
-          and dynamic transition for users as they explore different sections of the app.
+          Upon clicking an icon, users are seamlessly redirected to the associated page.
+          Additionally, I integrated a loading screen that is displayed during the
+          initial page load, ensuring a smooth and dynamic transition for users as
+          they explore different sections of the app.
         `,
         Results: `
           Bounce now has a seamless navigation experience, with users able to
