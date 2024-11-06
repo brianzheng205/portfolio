@@ -24,10 +24,6 @@ export default function About() {
             <p>MIT</p>
           </div>
           <div className={styles.infoItem}>
-            <h1>Grad Date</h1>
-            <p>May 2025</p>
-          </div>
-          <div className={styles.infoItem}>
             <h1>Major</h1>
             <p>Computer Science</p>
           </div>
@@ -37,8 +33,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      <h2>I am looking for a 2025 New Grad Software Engineering role.</h2>
 
       <div className={styles.linksContainer}>
         <Link className={styles.link} href="/experiences">
