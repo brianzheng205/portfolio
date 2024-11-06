@@ -1,5 +1,3 @@
-"use client";
-
 import ImageTextRow from "../components/ImageTextRow";
 
 import utilStyles from "../utils.module.css";
