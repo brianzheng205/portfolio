@@ -24,7 +24,6 @@ export default function SideBar() {
   const email = "brianzheng205@gmail.com";
   const linkedInUrl = "https://www.linkedin.com/in/brian205/";
   const githubUrl = "https://github.com/brianzheng205";
-  const resumeUrl = "/resume.pdf";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email).then(() => {
@@ -61,14 +60,6 @@ export default function SideBar() {
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faGithub} size="2x" />
-        </a>
-        <a
-          className={styles.icon}
-          href={resumeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faFileDownload} size="2x" />
         </a>
       </div>
 
