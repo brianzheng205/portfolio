@@ -1,3 +1,4 @@
+import { projectInfo as quantumInfo } from "./quantumEntanglment/data";
 import { projectInfo as compilerInfo } from "./compiler/data";
 import { projectInfo as pokerbotsInfo } from "./pokerbots/data";
 import { projectInfo as bounceInfo } from "./bounce/data";
@@ -5,6 +6,27 @@ import { projectInfo as bounceInfo } from "./bounce/data";
 import { ImageTextRowInfo } from "../types";
 
 export const feauturedProjects: ImageTextRowInfo[] = [
+  {
+    imageSrc: "/projects/quantumEntanglement/start.png",
+    title: quantumInfo.title,
+    metadata: "September 2024 - October 2024",
+    body: {
+      Overview: quantumInfo.description,
+      "Major Resources": quantumInfo.skills,
+      Journey: `
+        I followed online resources to learn how to use Unity and C# to create a 2D game.
+      `,
+      Results: `
+        I created a 2D puzzle game based on asymmetric information between players. 
+        I gained experience in Unity, C#, and the game development cycle.
+      `,
+    },
+    links: {
+      ...quantumInfo.links,
+      "Learn More": "/projects/quantumEntanglment",
+    },
+    pictureFirst: true,
+  },
   {
     imageSrc: "/projects/compiler/code.jpg",
     title: compilerInfo.title,
@@ -27,7 +49,7 @@ export const feauturedProjects: ImageTextRowInfo[] = [
   },
   {
     imageSrc: "/projects/pokerbots/poker.webp",
-    title: "Pokerbots",
+    title: pokerbotsInfo.title,
     metadata: "January 2024",
     body: {
       Overview: pokerbotsInfo.description,
@@ -47,7 +69,7 @@ export const feauturedProjects: ImageTextRowInfo[] = [
   },
   {
     imageSrc: "/bounce/recipes.png",
-    title: "Bounce (by Emily Liew)",
+    title: bounceInfo.title,
     metadata: "June 2023 — September 2023",
     body: {
       Overview: bounceInfo.description,

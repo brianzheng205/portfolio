@@ -7,7 +7,7 @@ import utilStyles from "../utils.module.css";
 export default function Projects() {
   return (
     <div className={utilStyles.column}>
-      <h1>Featured Projects</h1>
+      <h1>Projects</h1>
 
       {feauturedProjects.map((project) => (
         <ImageTextRow {...project} key={project.title} />
