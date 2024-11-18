@@ -1,3 +1,4 @@
+import { projectInfo as pumpUpInfo } from "./pumpUp/data";
 import { projectInfo as quantumInfo } from "./quantumEntanglment/data";
 import { projectInfo as compilerInfo } from "./compiler/data";
 import { projectInfo as pokerbotsInfo } from "./pokerbots/data";
@@ -6,6 +7,27 @@ import { projectInfo as bounceInfo } from "./bounce/data";
 import { ImageTextRowInfo } from "../types";
 
 export const feauturedProjects: ImageTextRowInfo[] = [
+  {
+    imageSrc: "/projects/pumpUp/home.png",
+    title: pumpUpInfo.title,
+    metadata: "September 2024 - October 2024",
+    body: {
+      Overview: pumpUpInfo.description,
+      "Major Resources": pumpUpInfo.skills,
+      Journey: `
+        I learned how to use Vue.js and Express.js through tutorials, lectures, and hands-on experience.
+        I designed the app based on user interviews and feedback.
+      `,
+      Results: `
+        PumpUp has been successfully implemented for gym-goers of all levels.
+      `,
+    },
+    links: {
+      ...pumpUpInfo.links,
+      "Learn More": "/projects/pumpUp",
+    },
+    pictureFirst: false,
+  },
   {
     imageSrc: "/projects/quantumEntanglement/start.png",
     title: quantumInfo.title,
