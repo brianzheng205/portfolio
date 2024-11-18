@@ -24,7 +24,7 @@ export const projectInfo: ProjectInfo = {
   skills: majorSkills,
   contributions: [
     {
-      imageSrc: "/bounce/transition.gif",
+      imageSrc: "/projects/bounce/transition.gif",
       title: "Seamless Navigation",
       body: {
         "Mission Purpose": `
@@ -50,7 +50,7 @@ export const projectInfo: ProjectInfo = {
       pictureFirst: false,
     },
     {
-      imageSrc: "/UI.png",
+      imageSrc: "/projects/bounce/UI.png",
       title: "Improving User Experience",
       body: {
         "Mission Purpose": `
@@ -75,11 +75,11 @@ export const projectInfo: ProjectInfo = {
   ],
   imagesInfo: [
     {
-      src: "/bounce/tasks.png",
+      src: "/projects/bounce/tasks.png",
       caption: "To-Do List Page",
     },
     {
-      src: "/bounce/recipes.png",
+      src: "/projects/bounce/recipes.png",
       caption: "Recipes Page",
     },
   ],

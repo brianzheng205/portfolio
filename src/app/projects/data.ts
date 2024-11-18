@@ -90,7 +90,7 @@ export const feauturedProjects: ImageTextRowInfo[] = [
     pictureFirst: true,
   },
   {
-    imageSrc: "/bounce/recipes.png",
+    imageSrc: "/projects/bounce/recipes.png",
     title: bounceInfo.title,
     metadata: "June 2023 — September 2023",
     body: {
